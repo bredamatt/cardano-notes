@@ -73,24 +73,6 @@ This is the slide template for the Polkadot Blockchain Academy July, 2022 midter
     * Game Theoretical Models
     * Auction Mechanics and Price Discovery Methods
 
----
-
-<!-- .slide: data-background-color="#8D3AED" -->
-
-# 3. Governance
-
----
-
-<widget-text style="padding: 0 3em 0 3em">
-
-**Goal:** Evaluate the use of governance in this project; name at least two things you like and two things you would want to improve.
-
-* How does this project solve the collective decision making problem?
-* What are the structures of governance in this project? How are changes proposed and voted on?
-* What voting mechanisms are used in this project?
-* Who is allowed to vote in this project? What are the voting criteria?
-
-
 -Market equilibrium-: (stuff can me found here about it and some more stuff about cardano)
 Native coin: ADA
 
@@ -129,6 +111,24 @@ a/b are protocol parameters:
 a reflects the dependence of the transaction cost on the size of the transaction. The larger the transaction, the more resources are needed to store and process it.
 b is a payable fee, regardless of the size of the transaction. This parameter was primarily introduced to prevent Distributed-Denial-of-Service (DDoS) attacks. b makes such attacks expensive, and eliminates the possibility of an attacker generating millions of small transactions to flood and crash the system.
 size(tx) is the transaction size in bytes
+---
+
+<!-- .slide: data-background-color="#8D3AED" -->
+
+# 3. Governance
+
+---
+
+<widget-text style="padding: 0 3em 0 3em">
+
+**Goal:** Evaluate the use of governance in this project; name at least two things you like and two things you would want to improve.
+
+* How does this project solve the collective decision making problem?
+* What are the structures of governance in this project? How are changes proposed and voted on?
+* What voting mechanisms are used in this project?
+* Who is allowed to vote in this project? What are the voting criteria?
+
+
 
 ---
 
