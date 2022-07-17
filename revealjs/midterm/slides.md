@@ -73,7 +73,8 @@ This is the slide template for the Polkadot Blockchain Academy July, 2022 midter
     * Game Theoretical Models
     * Auction Mechanics and Price Discovery Methods
 
--Market equilibrium-: (stuff can me found here about it and some more stuff about cardano)
+-------------------------------------------------
+
 Native coin: ADA
 
 Can be used for: 
@@ -82,28 +83,31 @@ Fees
 Governance
 
 Tokenomics: 
-Supply: 45 billion
-In circulation: 33.5 billion
-Monetary expansion rate: 0.3 % of the reserve (supply - in circulation) per epoch (every 5 days). Where 80 % is a reward for the stake pool, 20 % is for the treasury
-Deflationary supply
+- Supply: 45 billion
+- In circulation: 33.5 billion
+- Monetary expansion rate: 0.3 % of the reserve (supply - in circulation) per epoch (every 5 days). Where 80 % is a reward for the stake pool, 20 % is for the treasury
+- Deflationary supply
 
 Stake pools:
-Maximum size of stake pools
-Validators run a stake pool and ask commission from the delegators. Delegators delegate their stake to a staking pool and get rewarded proportionally to their stake. There is a latency period of 15-20 days, but delegators can unstake their stake whenever they want.
-“Parameter K”: defines how many pools there should be in the network and an estimated cap for their respective stake. Any amount of stake that surpasses this stake won’t earn additional reward.
-No slashing
-The Cardano environment is unique in the way it handles fees, as fees do not go directly to the block producer. Instead, they are pooled and then distributed to all pools that created blocks during an epoch.
+- Maximum size for stake pools
+- Validators run a stake pool and ask commission from the delegators. Delegators delegate their stake to a staking pool and get rewarded proportionally to their stake. There is a latency period of 15-20 days, but delegators can unstake their stake whenever they want.
+- “Parameter K”: defines how many pools there should be in the network and an estimated cap for their respective stake. Any amount of stake that surpasses this stake won’t earn additional reward.
+- No slashing
+- The Cardano environment is unique in the way it handles fees, as fees do not go directly to the block producer. Instead, they are pooled and then distributed to all pools that created blocks during an epoch.
 
--Economic specialization-: governance, keeping the network alive and potentially more with the possibility to write smart contracts on the csl/ccl?
+|Market equilibrium|: see tokenomics and stake pools
 
--Game theoretical models-: (just wrote some stuff down which we could use, not entirely sure for me what they want to see here)
+|Economic specialization|: governance, keeping the network alive and potentially more with the possibility to write smart contracts on the csl/ccl?
+
+|Game theoretical models|: (just wrote some stuff down which we could use, not entirely sure for me what they want to see here)
 equilibrium
 public good game
 tragedy of commons
 
--Auction mechanics-:
 
--price discovery methods-:
+|Auction mechanics|: side chains, will look into this now (Daan)
+
+|price discovery methods|:
 Fees are constructed around two constants (a and b). The formula for calculating minimal fees for a transaction (tx) is: 
 a * size(tx) + b		
 where:
