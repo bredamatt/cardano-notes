@@ -78,6 +78,9 @@ Potential Attack Vector or Denial of Service:
 -->
 
 
+## Approach
+
+We will now attempt to analyse the Cardano Blockchain Governance system according to these decisions.
 
 ## Terminology
 
