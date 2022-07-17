@@ -6,8 +6,6 @@
 
 <widget-text style="padding: 0 3em 0 3em">
 
-This is the slide template for the Polkadot Blockchain Academy July, 2022 midterm.
-
 ---
 
 ##  Introduction
