@@ -112,10 +112,10 @@ tragedy of commons
 Fees are constructed around two constants (a and b). The formula for calculating minimal fees for a transaction (tx) is: 
 a * size(tx) + b		
 where:
-a/b are protocol parameters:
-a reflects the dependence of the transaction cost on the size of the transaction. The larger the transaction, the more resources are needed to store and process it.
-b is a payable fee, regardless of the size of the transaction. This parameter was primarily introduced to prevent Distributed-Denial-of-Service (DDoS) attacks. b makes such attacks expensive, and eliminates the possibility of an attacker generating millions of small transactions to flood and crash the system.
-size(tx) is the transaction size in bytes
+* a/b are protocol parameters:
+- a reflects the dependence of the transaction cost on the size of the transaction. The larger the transaction, the more resources are needed to store and process it.
+- b is a payable fee, regardless of the size of the transaction. This parameter was primarily introduced to prevent Distributed-Denial-of-Service (DDoS) attacks. b makes such attacks expensive, and eliminates the possibility of an attacker generating millions of small transactions to flood and crash the system.
+* size(tx) is the transaction size in bytes
 ---
 
 <!-- .slide: data-background-color="#8D3AED" -->
