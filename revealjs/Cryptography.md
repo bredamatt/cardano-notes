@@ -7,6 +7,7 @@
 * The hashing algorithm for all verification keys and multi-signature scripts is BLAKE2b-224. Explicitly, this is the payment and stake credentials, the genesis keys and their delegates, stake pool verification keys, and VRF verification keys.
 Everywhere else we use BLAKE2b-256.
 
+
 *
 
 ## Does this project use any exotic primitives?  If so, which ones?
@@ -17,11 +18,19 @@ Everywhere else we use BLAKE2b-256.
 * [Exotic primitives used in governance](#Cryptographic-aspects-of-governance)
 
 ## How does this project use digital signatures for security?
-* It 
+* Key evolving signatures (KES) according to the MMM scheme. These type of signature schemes provide forward cryptographic security, meaning that a compromised key does not make it easier for an adversary to forge a signature that allegedly had been signed in the past. In KES, the public verification key stays constant, but the corresponding private key evolves
+incrementally. For this reason, KES signing keys are indexed by integers representing the step in
+the key’s evolution. This evolution step parameter is also an additional parameter needed for
+the signing (denoted by sign ev ) and verification (denoted by verify ev ) functions.
+Since the private key evolves incrementally in a KES scheme, the ledger rules require the pool
+operators to evolve their keys every time a certain number of slots have passed, as determined
+by the global constant SlotsPerKESPeriod.
+
+* Multi sigs. The terms form a tree like structure and are evaluated via the evalMultiSigScript function. The parameters are a script and a set of key hashes. The function returns True when the supplied key hashes are a valid combination for the script, otherwise it returns False
 
 
 
-* It hashes verification keys, multi sigs and ... 
+* It hashes verification keys, multi sigs and ... for authentication of transaction data
 ## How does this project use hashing and hash-based data structures to ensure security?
 
 
@@ -48,14 +57,6 @@ Following are the primitives used in governance -
 - Commitment scheme
   - [Pre-Voting] The seed which is used to select a random group of committee members to tally and execute votes is committed in the previous voting round, and revealed at the start of the new voting round
 
-<!-- 
-Potential Attack Vector or Deadlock Scenario:
-Scenario:
-  - The committee members commit the seed onchain
-  - Majority go offline before the next pre-voting epoch
-  - The seed for the next round of voting is not decrypted
-  - The voting halts, and no new proposals can be created
--->
 
 
 #### Exotic primitives

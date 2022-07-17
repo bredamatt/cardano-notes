@@ -33,11 +33,11 @@ Think of this as the outcome of a voting process being the "best" possible outco
 
 ## Confidentiality
 
-Type 1: "Secrecy":
+- Type 1: "Secrecy":
 
 *"A blockchain governance system satisfies secrecy if whenever a decision-making process is held, an adversary cannot guess the input of any participant better than an adversarial algorithm whose only inputs are the overall tally and, if the adversary is a participant, the adversary’s input."*
 
-Type 2: "Pseudonymity":
+- Type 2: "Pseudonymity":
 
 *"A blockchain governance system satisfies pseudonymity if no participant is required to reveal their real-life identity to participate in the decision-making processes"*
 
@@ -59,10 +59,10 @@ Think of this as "Skin-in-the-Game".
 
 ## Sustainability
 
-Type 1: "Development":
+- Type 1: "Development":
 *"A blockchain governance system sustains development if it incentivises, via monetary rewards or otherwise, participants who develop successful improve ment proposals for the platform"*
 
-Type 2: "Participation":
+- Type 2: "Participation":
 *"A blockchain governance system sustains participation if it incentivises, via monetary rewards or otherwise, participants who participate in the decision-making process of the platform"*
 
 ## Liveness
@@ -84,28 +84,39 @@ We will now attempt to analyse the Cardano Blockchain Governance system accordin
 
 ## Terminology
 
-To understand the governance terminoloy in Cardano better, let us break down some important terms:
+To understand the governance terminoloy in Cardano better, let us break down some important terms.
 
-- Proposer: a community member who proposes a project
-- Voter: a community member, who decides to vote on a project
-- Expert: a community member, who declares him/herself as an expert on a particular topic and receives "delegated stake"
-- Committee member: a (partially) randomly chosen voter, which is in charge of executing the voting process
+### Proof-of-Stake
 
-### Proposers
+In Cardano's governance system, voting power is proportial to *stake*.
 
+Stake can be defined as: "number of tokens locked to a particular voting round".
 
+### Proposer
+
+A community member who proposes a project. Projects also need to go through a proposal review process (which is off-chain).
 
 ### Voters
 
+Community members, who decides to vote on a project. They do this by depositing an amount of Ada (Cardano native-token). 
 
+They are incentivized to deposit more within a voting round whenever they see proposals they are interested in.
+
+### Experts
+
+A community member, who declares him/herself as an expert on a particular topic and receives "delegated stake".
+
+This is a particular type of staking mechanism which lets voters delegate their voting power to an expert, without sending his/her coins to them directly.
 
 ### Committee
 
+A (*partially*) randomly chosen "special" voter (for example someone who has deposited a large stake), which is in charge of tallying and executing the votes. 
 
+The likelihood of being selected as a committee member is propotional to the amount of stake a particular voter has deposited, but all randomly chosen committee members, must also confirm their position on the committee with a special transaction.
 
-## Treasury
+### Treasury
 
-As mentioned, Cardano uses a treasury system to govern the evolution of the protocol. The treasury can be seen as a fund for collective decision making purposes. 
+As mentioned, Cardano uses a treasury system to govern the evolution of the protocol. The treasury can be seen as a fund for collective decision making purposes.
 
 ### Funding
 
@@ -113,7 +124,7 @@ The treasury is funded in three different ways:
 
 - when new blocks are minted, a proportion of the reward goes to the treasury
 - miners' rewards are taxed, and the tax is collected to the treasury
-- donations, or charity
+- donations, or charity are also possible venues of funding
 
 ## Collective Decision Making
 
@@ -127,15 +138,29 @@ The way the treasury funds are spent, is decided via a collective decision makin
 
 During the pre-voting epoch, the proposers submit a set of proposals which need to be voted on.
 
+It is important to note that only one CIP (Cardano Improvement Proposal) can be proposed at a time, whereas multiple FP's (Funding Proposals) can be proposed at the same time.
+
+Additionally, it is at this stage that voters and experts register for the voting round using specific transactions. 
+
+Theoretically there is a certain, but unidentified, desirable amount of experts per round, because there is a threshold: 
+
+$$ \beta_{min} $$
+ 
+which defines the maximum stake rewards an expert can obtain from a particular round.  This raises some questions around the Pareto efficiency of the decision making process since "experts" related to a particular proposal are disenctivized from paricipating with majority stake.
+
+However, both experts and voters have to stake to join a voting round, which implies that only those interested in a particular outcome would put in the skin in the game, and therefore prevent "no-stake-attacks".
+ 
 ### Voting epoch
 
-During the voting epoch, the voting committee is selected by
-!!insert-fancy-method-here!!. The committee generates a voting
-key and the voters cast votes.
+During the voting epoch, the voting committee is first selected with a random probability on a set mathematical inequality, which incorporates the use of the random seed generated by the previous voting committee. This random seed is generated using a hierarchical deterministic algorithm.
+
+After the committee generates a voting key using a decentralized threshold key-generation algorithm, the voters cast votes, which can be of three forms:
+
+$${Yes, No, Abstain }$$
 
 ### Post-voting epoch
 
-During the post-voting epoc, eah voting committee member will post the encrypted form of a part of the group $$\mathbb{G}$$
+During the post-voting epoch, each voting committee member will post the encrypted form of a part of the group $$\mathbb{G}$$
 
 ### Liquid democracy
 
@@ -146,3 +171,13 @@ A liquid democracy is a combination of a direct, and representative democracy. I
 ### Cryptographic primitives
 
 The primitives used in governance are highlighted [here](../Cryptography.md)
+
+
+### Answers to the questions
+
+2 things we liked about the Cardano Blockchain Governance system:
+- Liquid democracy (the ability to delegate votes to an expert)
+- The commit-reveal mechanism which allows the committee to generate a random seed for the next round of voting
+
+2 things we disliked about the Cardano Blockchain
+- The lack of a mechanism to prevent our potential attack vector
