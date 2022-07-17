@@ -27,10 +27,7 @@ Can be established for a blockchain governance system various ways:
 
 ## Pareto Efficiency
 
-*"A blockchain governance system is Pareto efficient
-if whenever a decision-making process is held, alternative X cannot
-win if there exists another alternative Y that is preferred by at least
-one participant and no participant prefers X over Y."*
+*"A blockchain governance system is Pareto efficient if whenever a decision-making process is held, alternative X cannot win if there exists another alternative Y that is preferred by at least one participant and no participant prefers X over Y."*
 
 Think of this as the outcome of a voting process being the "best" possible outcome of the set of outcomes that could occur.
 
@@ -38,26 +35,17 @@ Think of this as the outcome of a voting process being the "best" possible outco
 
 Type 1: "Secrecy":
 
-*"A blockchain governance system
-satisfies secrecy if whenever a decision-making process is held, an
-adversary cannot guess the input of any participant better than an
-adversarial algorithm whose only inputs are the overall tally and, if
-the adversary is a participant, the adversary’s input."*
+*"A blockchain governance system satisfies secrecy if whenever a decision-making process is held, an adversary cannot guess the input of any participant better than an adversarial algorithm whose only inputs are the overall tally and, if the adversary is a participant, the adversary’s input."*
 
 Type 2: "Pseudonymity":
 
-*"A blockchain governance system satisfies pseudonymity if no participant is required to
-reveal their real-life identity to participate in the decision-making
-processes"*
+*"A blockchain governance system satisfies pseudonymity if no participant is required to reveal their real-life identity to participate in the decision-making processes"*
 
 Where Type 1 is stronger than Type 2. 
 
 ## (End-to-End) Verifiability
 
-*"A blockchain governance system is verifiable if whenever a decision-making process
-takes place, participants are able to verify their inputs were properly
-tallied and independent observers are able to verify that inputs from
-eligible participants were properly tallied."*
+*"A blockchain governance system is verifiable if whenever a decision-making process takes place, participants are able to verify their inputs were properly tallied and independent observers are able to verify that inputs from eligible participants were properly tallied."*
 
 Usually, split between:
 - individual (voter can verify their vote was created, stored and tallied correctly)
@@ -65,35 +53,21 @@ Usually, split between:
 
 ## Accountability
 
-*"A blockchain governance system satisfies the prop-
-erty of accountability if whenever participants bring in a change, they
-are held individually responsible for it in a clearly defined way by the
-platform."*
+*"A blockchain governance system satisfies the property of accountability if whenever participants bring in a change, they are held individually responsible for it in a clearly defined way by the platform."*
 
 Think of this as "Skin-in-the-Game".
 
 ## Sustainability
 
-- Development:
-*"A blockchain gov-
-ernance system sustains development if it incentivises, via monetary
-rewards or otherwise, participants who develop successful improve-
-ment proposals for the platform"*
+Type 1: "Development":
+*"A blockchain governance system sustains development if it incentivises, via monetary rewards or otherwise, participants who develop successful improve ment proposals for the platform"*
 
-- Participation:
-*"A blockchain gov-
-ernance system sustains participation if it incentivises, via monetary
-rewards or otherwise, participants who participate in the decision-
-making process of the platform"*
+Type 2: "Participation":
+*"A blockchain governance system sustains participation if it incentivises, via monetary rewards or otherwise, participants who participate in the decision-making process of the platform"*
 
 ## Liveness
 
-*"A blockchain governance system satisfies liveness if it is capable of incorporating an input of urgency from the
-stakeholders and then being capable of acting on it in the sense that
-if an issue is deemed to be urgent according to some function, then
-the decision making procedure is capable of terminating within a
-reasonable amount of time, as a function of the urgency of the matter."*
-
+*"A blockchain governance system satisfies liveness if it is capable of incorporating an input of urgency from the stakeholders and then being capable of acting on it in the sense that if an issue is deemed to be urgent according to some function, then the decision making procedure is capable of terminating within a reasonable amount of time, as a function of the urgency of the matter."*
 
 <!-- 
 Potential Attack Vector or Denial of Service:
