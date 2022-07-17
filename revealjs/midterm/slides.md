@@ -6,8 +6,6 @@
 
 <widget-text style="padding: 0 3em 0 3em">
 
-This is the slide template for the Polkadot Blockchain Academy July, 2022 midterm.
-
 ---
 
 ##  Introduction
@@ -23,6 +21,11 @@ This is the slide template for the Polkadot Blockchain Academy July, 2022 midter
 4. What does it allow users to do?
 
 5. What is the differentiator for this project (what makes it unique from other blockchains or projects)?
+
+    - Formal Verification
+    - Seperation of the settlement layer and the computation layer
+    - Support for legacy systems
+    - *Private* liquid democracy
 
 ---
 
