@@ -90,6 +90,46 @@ This is the slide template for the Polkadot Blockchain Academy July, 2022 midter
 * What voting mechanisms are used in this project?
 * Who is allowed to vote in this project? What are the voting criteria?
 
+
+-Market equilibrium-: (stuff can me found here about it and some more stuff about cardano)
+Native coin: ADA
+
+Can be used for: 
+Staking
+Fees
+Governance
+
+Tokenomics: 
+Supply: 45 billion
+In circulation: 33.5 billion
+Monetary expansion rate: 0.3 % of the reserve (supply - in circulation) per epoch (every 5 days). Where 80 % is a reward for the stake pool, 20 % is for the treasury
+Deflationary supply
+
+Stake pools:
+Maximum size of stake pools
+Validators run a stake pool and ask commission from the delegators. Delegators delegate their stake to a staking pool and get rewarded proportionally to their stake. There is a latency period of 15-20 days, but delegators can unstake their stake whenever they want.
+“Parameter K”: defines how many pools there should be in the network and an estimated cap for their respective stake. Any amount of stake that surpasses this stake won’t earn additional reward.
+No slashing
+The Cardano environment is unique in the way it handles fees, as fees do not go directly to the block producer. Instead, they are pooled and then distributed to all pools that created blocks during an epoch.
+
+-Economic specialization-: governance, keeping the network alive and potentially more with the possibility to write smart contracts on the csl/ccl?
+
+-Game theoretical models-: (just wrote some stuff down which we could use, not entirely sure for me what they want to see here)
+equilibrium
+public good game
+tragedy of commons
+
+-Auction mechanics-:
+
+-price discovery methods-:
+Fees are constructed around two constants (a and b). The formula for calculating minimal fees for a transaction (tx) is: 
+a * size(tx) + b		
+where:
+a/b are protocol parameters:
+a reflects the dependence of the transaction cost on the size of the transaction. The larger the transaction, the more resources are needed to store and process it.
+b is a payable fee, regardless of the size of the transaction. This parameter was primarily introduced to prevent Distributed-Denial-of-Service (DDoS) attacks. b makes such attacks expensive, and eliminates the possibility of an attacker generating millions of small transactions to flood and crash the system.
+size(tx) is the transaction size in bytes
+
 ---
 
 <!-- .slide: data-background-color="#8D3AED" -->
