@@ -107,6 +107,7 @@ tragedy of commons
 
 |Auction mechanics|: side chains, will look into this now (Daan)
 
+
 |price discovery methods|:
 Fees are constructed around two constants (a and b). The formula for calculating minimal fees for a transaction (tx) is: 
 a * size(tx) + b		
