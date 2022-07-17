@@ -61,16 +61,49 @@ eligible participants were properly tallied."*
 
 Usually, split between:
 - individual (voter can verify their vote was created, stored and tallied correctly)
-- global (everyone can verify that only  )
-
+- global (everyone can verify that only valid votes are in the ballot box, and that all stored votes are properly tallied)
 
 ## Accountability
 
+*"A blockchain governance system satisfies the prop-
+erty of accountability if whenever participants bring in a change, they
+are held individually responsible for it in a clearly defined way by the
+platform."*
 
+Think of this as "Skin-in-the-Game".
 
 ## Sustainability
 
+- Development:
+*"A blockchain gov-
+ernance system sustains development if it incentivises, via monetary
+rewards or otherwise, participants who develop successful improve-
+ment proposals for the platform"*
+
+- Participation:
+*"A blockchain gov-
+ernance system sustains participation if it incentivises, via monetary
+rewards or otherwise, participants who participate in the decision-
+making process of the platform"*
+
 ## Liveness
+
+*"A blockchain governance system satisfies liveness if it is capable of incorporating an input of urgency from the
+stakeholders and then being capable of acting on it in the sense that
+if an issue is deemed to be urgent according to some function, then
+the decision making procedure is capable of terminating within a
+reasonable amount of time, as a function of the urgency of the matter."*
+
+
+<!-- 
+Potential Attack Vector or Denial of Service:
+  - The committee members commit the seed onchain
+  - Majority go offline before the next pre-voting epoch
+  - The seed for the next round of voting is not decrypted
+  - The voting halts, and no new proposals can be created
+-->
+
+
 
 ## Terminology
 
