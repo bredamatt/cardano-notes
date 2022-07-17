@@ -85,7 +85,7 @@ Governance
 Tokenomics: 
 - Supply: 45 billion
 - In circulation: 33.5 billion
-- Monetary expansion rate: 0.3 % of the reserve (supply - in circulation) per epoch (every 5 days). Where 80 % is a reward for the stake pool, 20 % is for the treasury
+- Monetary expansion rate: 0.3 % (half of the remaining reserve would be used every four to five years) of the reserve (supply - in circulation) per epoch (every 5 days). Where 80 % is a reward for the stake pool, 20 % is for the treasury
 - Deflationary supply
 
 Stake pools:
