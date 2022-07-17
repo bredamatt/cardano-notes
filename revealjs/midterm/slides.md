@@ -24,6 +24,11 @@ This is the slide template for the Polkadot Blockchain Academy July, 2022 midter
 
 5. What is the differentiator for this project (what makes it unique from other blockchains or projects)?
 
+    - Formal Verification
+    - Seperation of the settlement layer and the computation layer
+    - Support for legacy systems
+    - *Private* liquid democracy
+
 ---
 
 ## Outline
