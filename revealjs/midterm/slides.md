@@ -14,9 +14,9 @@ This is the slide template for the Polkadot Blockchain Academy July, 2022 midter
 
 <widget-text style="padding: 0 3em 0 3em">
 
-1. Who are the members of your team?
+1. We are Aaryamann, Adam, Anton, Daan, Frank & Mattia
 
-2. What blockchain or blockchain project are you analyzing? Please insert a link to the original whitepaper.
+2. We analyzed the Cardano blockchain project. [Whitepaper](https://whitepaper.io/document/581/cardano-whitepaper)
 
 3. What are the core offerings of this blockchain/project?
 
