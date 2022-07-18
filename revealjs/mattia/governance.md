@@ -14,24 +14,24 @@ In this paper, there are 7 properties we can base our evaluation on:
 6. Sustainability
 7. Liveness
 
-## Suffrage
+## 1. Suffrage
 
 *"The right to participate
 in decision making procedures."*
 
-Can be established for a blockchain governance system various ways:
+Rights provied in various ways:
 
 - mining based (hashing power)
 - token based (token owenership)
 - identity based (identity verification)
 
-## Pareto Efficiency
+## 2. Pareto Efficiency
 
-*"A blockchain governance system is Pareto efficient if whenever a decision-making process is held, alternative X cannot win if there exists another alternative Y that is preferred by at least one participant and no participant prefers X over Y."*
+*"A blockchain governance system is Pareto efficient if whenever a decision-making process is held, alternative X cannot win if there exists another alternative Y that is preferred by at least one participant, and no participant prefers X over Y."*
 
 Think of this as the outcome of a voting process being the "best" possible outcome of the set of outcomes that could occur.
 
-## Confidentiality
+## 3. Confidentiality
 
 - Type 1: "Secrecy":
 
@@ -43,7 +43,7 @@ Think of this as the outcome of a voting process being the "best" possible outco
 
 Where Type 1 is stronger than Type 2. 
 
-## (End-to-End) Verifiability
+## 4. (End-to-End) Verifiability
 
 *"A blockchain governance system is verifiable if whenever a decision-making process takes place, participants are able to verify their inputs were properly tallied and independent observers are able to verify that inputs from eligible participants were properly tallied."*
 
@@ -51,21 +51,21 @@ Usually, split between:
 - individual (voter can verify their vote was created, stored and tallied correctly)
 - global (everyone can verify that only valid votes are in the ballot box, and that all stored votes are properly tallied)
 
-## Accountability
+## 5. Accountability
 
 *"A blockchain governance system satisfies the property of accountability if whenever participants bring in a change, they are held individually responsible for it in a clearly defined way by the platform."*
 
-Think of this as "Skin-in-the-Game".
+Think of this as "Skin-in-the-Game". Parties participating in the governance system are incentivized to do good because they themselves are accountable for their own profits/rewards for doing so.
 
-## Sustainability
+## 6. Sustainability
 
 - Type 1: "Development":
-*"A blockchain governance system sustains development if it incentivises, via monetary rewards or otherwise, participants who develop successful improve ment proposals for the platform"*
+*"A blockchain governance system sustains development if it incentivises, via monetary rewards or otherwise, participants who develop successful improvement proposals for the platform"*
 
 - Type 2: "Participation":
 *"A blockchain governance system sustains participation if it incentivises, via monetary rewards or otherwise, participants who participate in the decision-making process of the platform"*
 
-## Liveness
+## 7. Liveness
 
 *"A blockchain governance system satisfies liveness if it is capable of incorporating an input of urgency from the stakeholders and then being capable of acting on it in the sense that if an issue is deemed to be urgent according to some function, then the decision making procedure is capable of terminating within a reasonable amount of time, as a function of the urgency of the matter."*
 
@@ -75,28 +75,58 @@ Potential Attack Vector or Denial of Service:
   - Majority go offline before the next pre-voting epoch
   - The seed for the next round of voting is not decrypted
   - The voting halts, and no new proposals can be created
-  - The system is not crash tolerant
-  - The system does not have any liveness proofs
 -->
-
-
-## Approach
-
-We will now attempt to analyse the Cardano Blockchain Governance system according to these definitions.
 
 ## Terminology
 
-To understand the governance terminoloy in Cardano better, let us break down some important terms.
+To understand the governance terminology in Cardano better, let us break down some important concepts. 
 
-### Proof-of-Stake
+A fundamental question to ask is what the *purpose* of a governance system.
 
-In Cardano's governance system, voting power is proportial to *stake*.
+### Purpose
 
-Stake can be defined as: "number of tokens locked to a particular voting round".
+For any ecosystem to have a sustainable future, it is necessary to govern a system's evolution. The only way to do this is to have a fair process where system participants are incentivized to act collectively for the common benefit. This is why we have decided to leverage the 7 definitions above as a framework for assessing Cardano's governance system.
 
-### Proposer
+In general, governance issues arise whenever it becomes rational for an individual actor to game / play the system for his/her own benefit at the expense of the common good. Hence, we could say that the value of a particular governance system is the extent to which it makes it rational to act in the interest of the common good.
 
-A community member who proposes a project. Projects also need to go through a proposal review process (which is off-chain).
+### Proposals
+
+Generally, all system participants may have ideas about how the system should evolve. One would argue, that as a participant in a system, one immediately has "skin-in-the-game" in that system - indeed the success of that system is dependent upon one's own contribution to it. Therefore, one could argue that we are naturally inclined to seek to benefit the systems we are a part of unless the cost of exploiting the system is cheap enough to make it more rational to do relative to improving it.
+
+In Cardano, the ideas community members have for improving the Cardano ecosystem is defined as *proposals* here $P$, where there is a proposal $p_{i} \space, where \space i \in [0..N]$ for $N$ propsers. One way to think of these are as parameters to a "governance function" $\lambda(p_{i})$ taking as input the set of proposals $p_{i} \in P$. 
+
+It is primarily $\lambda$ we are interested in evaluating in this section as it will by nature involve more technical goodies. 
+
+Nevertheless it is important to check how easy it is to become a member in the first place to determine the extent to which the Cardano ecosystem incentivizes and grants an equal opportunity for community members to participate in the platform's evolution. In other words, we can assess both the sustainability and suffrage aspects of Cardano's governance model by looking into these aspects.
+
+#### Funding Proposals vs Cardano Improvement Proposals
+
+The first caveat we discovered was that there are two different types of proposals in the Cardano ecosystem:
+
+- Cardano Improvement Proposals (CIPs), and
+- Funding Proposals (FP)
+
+The CIPs are entirely managed by the Cardano Foundation, whereas solely FPs are eligible for the community to decide upon. This indicates that there is to some degree an aspect of centralization remaining in the Cardano's governance system. This is regardless of the fact that Cardano has a significant amount of open source contribution. 
+
+#### Becoming a community member
+
+A core question is therefore, "where do I create / propose a project?". This is handled in practice with [Project Catalyst](https://projectcatalyst.org/), which creates an online platform where community members can learn about how to come up with their own proposals.
+
+It was important for us to see how easy it was to sign up to the Cardano Community. We signed up to Project Catalyst as a standard user so we could evaluate the governance system's practicalities in more detail. This was quite straightforward, we just signed up with an email address, created a password, and verified our email address. Unfortunately, we were unable to propose a new project because the deadline had passed, but there was a well-defined interface for doing so, and we quickly found out the different stages from project ideation to funding, which consisted of:
+
+- Proposal
+- Review
+- Finalize
+- Assessment
+- Assess QA
+- Governance 
+- Archive
+
+For the sake of brevity, we will concentrate solely on the Governance 
+
+#### Funding round 9
+
+Currently, Cardano's treasury system is in Funding round 9 (usually listed as FUND9). The data surrounding the treasury, and its overall funding history, is relatively transparent, but not necessarily ideally visualised. The data is generally shared through a shared Google Doc, which is publicly readable.
 
 ### Voters
 
@@ -168,18 +198,16 @@ During the post-voting epoch, each voting committee member will post the encrypt
 
 A liquid democracy is a combination of a direct, and representative democracy. In a direct democracy, everyone votes for every proposal. In a representative democracy, all voters vote for representative, who make all the decisions. In a liquid democracy, all voters can voters can vote directly on a proposal, or they can delegate their votes to an expert. This is useful in scenarios when a voter does not necessarily know enough about a particular proposal, and wants their voting weight, as votes are determined by the amount of Ada staked, to be delegated to someone the voter believes to be more knowledgable about a particlar project.
 
-### Delegated Proof-of-Stake
-
 ### Cryptographic primitives
 
 The primitives used in governance are highlighted [here](../Cryptography.md)
 
-
 ### Answers to the questions
 
 2 things we liked about the Cardano Blockchain Governance system:
-- Liquid democracy (the ability to delegate votes to an expert)
+- Liquid democracy (the ability to delegate votes to an expert, and for experts to delegate their votes further as well)
 - The commit-reveal mechanism which allows the committee to generate a random seed for the next round of voting
 
 2 things we disliked about the Cardano Blockchain
 - The lack of a mechanism to prevent our potential attack vector
+- The fact that voting power is proportional to stake.
