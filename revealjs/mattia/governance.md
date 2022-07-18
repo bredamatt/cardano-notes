@@ -76,6 +76,7 @@ Potential Attack Vector or Denial of Service:
   - The seed for the next round of voting is not decrypted
   - The voting halts, and no new proposals can be created
   - The system is not crash tolerant
+  - The system does not have any liveness proofs
 -->
 
 
