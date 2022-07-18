@@ -181,3 +181,4 @@ The primitives used in governance are highlighted [here](../Cryptography.md)
 
 2 things we disliked about the Cardano Blockchain
 - The lack of a mechanism to prevent our potential attack vector
+- The fact that voting power is proportional to stake
