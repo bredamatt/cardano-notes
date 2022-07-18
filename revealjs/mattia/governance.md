@@ -75,6 +75,8 @@ Potential Attack Vector or Denial of Service:
   - Majority go offline before the next pre-voting epoch
   - The seed for the next round of voting is not decrypted
   - The voting halts, and no new proposals can be created
+  - The system is not crash tolerant
+  - The system does not have any liveness proofs
 -->
 
 
@@ -181,4 +183,3 @@ The primitives used in governance are highlighted [here](../Cryptography.md)
 
 2 things we disliked about the Cardano Blockchain
 - The lack of a mechanism to prevent our potential attack vector
-- The fact that voting power is proportional to stake
