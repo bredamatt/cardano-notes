@@ -1,4 +1,4 @@
-# Caradano: Cryptography, Economics and Blockchains Midterm
+# Cardano: Cryptography, Economics and Blockchains Midterm
 
 - Introduction
 - [Cryptography](revealjs/Cryptography.md)
