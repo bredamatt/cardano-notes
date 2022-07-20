@@ -14,6 +14,18 @@ In this paper, there are 7 properties we can base our evaluation on:
 6. Sustainability
 7. Liveness
 
+These definitions will be discussed loosely as we evalaute the different components that constitute the Cardano governance system. But first, let us define why we need a governance system.
+
+## Purpose
+
+For any ecosystem to have a sustainable future, it is necessary to govern a system's evolution. Yet the key point, is to figure out where the ecosystem is evolving (to something better, or worse?).
+
+It is quite common to state that the purpose of a governance system is to maximize the utility of its participants. It follows that we need to know what the utility function of a participant in the community would be, but for now we can simply state it is about a positive evolution of the Cardano ecosystem. An example of this would be when meaningful projects and use-cases are implemented on the Cardano blockchain. 
+
+In general, governance problems arise whenever it becomes rational for an individual actor to game / play the system for his/her own benefit at the expense of the common good of the community. Hence, we could say that a particular governance system is good only as far as it makes it rational for system participants to act in the interest of the common good. In other words, a well-designed governance mechanism would also be capable of incentivizing agents, or at least indirectly making them act in the interest of the common good, even when it may initially appear rationally not to.
+
+The above points are important to take into consideration when assessing the Cardano governance mechanism with respect to the Blockchain Governance definitions below.
+
 ## Blockchain Governance definitions
 
 ### 1. Suffrage
@@ -84,22 +96,6 @@ Potential Attack Vector or Denial of Service:
 
 To understand the governance terminology in Cardano better, let us break down some important concepts. 
 
-### Purpose
-
-For any ecosystem to have a sustainable future, it is necessary to govern a system's evolution. We have decided to leverage the 7 definitions above as a framework for assessing Cardano's governance system. This can only be done once we know what the purpose of a governance system is. In a democracy, one could argue that the end-goal of democracy is to maximize the well-being of its citizens.
-
-In general, governance problems arise whenever it becomes rational for an individual actor to game / play the system for his/her own benefit at the expense of the common good. Hence, we could say that a particular governance system is good only as far as it makes it rational for system participants to act in the interest of the common good. In other words, a well-designed governance mechanism would also be capable of incentivizing agents, or at least indirectly making them act in the interest of the common good, even when it may initially appear rationally not to.
-
-### Proposals
-
-To contribute to the sustainable evolution of the Cardano ecosystem, community members are eligible to submit proposals. Generally, all system participants may have ideas about how the system should evolve, but not all of them may know what is in their best interest. Nevertheless, one would argue, that as a participant in a system, one immediately has "skin-in-the-game" in that system since it directly effects the person's life.
-
-The most obvious incentive for community members to participate in the Cardano ecosystem is to make the Cardano ecosystem better. What this "better" implies, however, is not very clear. The most obvious definition would be "better in such a way that the underlying native token of Cardano, namely ADA, surges in value", thereby increasing the financial position of the community member.
-
-As we learned from the collective decision making games in class, even if on the average it is rational to contribute, there are occassions where it is more rational to deviate, where rationality implies making a decision that maximizes the decision maker's utility rather than that of the collective. Hence, any person deciding to join the commuinity may have good intentions, but may nevertheless still face a scenario where it is more beneficial to deviate.
-
-Because stake in the system is relatively to the amount of ADA tokens of a particular community member, it would arguably make the most sense that there are financial incentives at play, and that these financial incentives also prevent adversarial behavior. 
-
 ### Funding Proposals vs Cardano Improvement Proposals
 
 Cardano's governance system consists of:
@@ -111,13 +107,25 @@ The first caveat we discovered was that there are two different types of proposa
 - Cardano Improvement Proposals (CIPs), and
 - Funding Proposals (FP)
 
-The CIPs are entirely managed by the Cardano Foundation, whereas solely FPs are eligible for the community to decide upon. This indicates that there is to some degree an aspect of centralization remaining in Cardano's governance system. It has been mentioned, nevertheless that eventually, CIPs will also be governed by the community, but it is unclear when. Regardless, of the truthfulness of the latter statement, it is near impossible to claim that the decision to make CIPs subject to public voting is made in a decentralized manner. This being said, we have to restrict the analysis of the governance process to FPs accordingly.
+The CIPs are entirely managed by the Cardano Foundation, whereas solely FPs are eligible for the community to decide upon. This indicates that there is to some degree an aspect of centralization remaining in Cardano's governance system, at least the protocol layer. It has been mentioned, nevertheless that eventually, CIPs will also be governed by the community, but it is unclear when. Regardless of the truthfulness of the latter statement, it is near impossible to claim that the decision to make CIPs subject to public voting is made in a decentralized manner. This being said, we have to restrict the analysis of the governance process to FPs accordingly.
+
+### Proposals
+
+To contribute to the sustainable evolution of the Cardano ecosystem, community members are eligible to submit proposals. These proposals represents projects to be built on top of the Cardano blockchain.
+
+Generally, all system participants may have ideas about how the system should evolve, but not all of them may know what is in their best interest. Nevertheless, one would argue, that as a participant in a system, one immediately has "skin-in-the-game" in that system since it directly effects the person's utility.
+
+The most obvious incentive for community members to participate in the Cardano ecosystem is to make the Cardano ecosystem better. What this "better" implies, however, is not very clear. The most obvious definition would be "better in such a way that the underlying native token of Cardano, namely ADA, surges in value", thereby increasing the financial position of the community member. There may be purely altruistic motives, or community members with an interest in solving difficult enginereering problems (we do not exclude such participants here).
+
+As we learned from the collective decision making games in class, even if on the average it is rational to contribute to common good, there are occassions where it is more rational to deviate. Here, rationality implies making a decision that maximizes the decision maker's utility rather than that of the collective. This is also important to take into consideration, when considering the extent to which the good of the community has a positive impact on the individual's utility. In a Blockchain scenario, the most common binder between an individual actor, and the community itself, is its underlying token. Hence, any person deciding to join the commuinity may have good intentions, but may nevertheless face a scenario where it is more beneficial to deviate, such as for example disrupting a positive project, when a short position on the tokens value exists. ...But, because stake in the system is relative to the amount of ADA tokens a particular community member holds, it would arguably make the most sense that there are financial incentives at play, and that these financial incentives prevent adversarial behavior. 
 
 ### Evaluating Project Catalyst
 
-A core question is therefore, "where do I create / propose a project?". In practice, this can be done with [Project Catalyst](https://projectcatalyst.org/), an online platform where community members can learn about how to come up with their own proposals, vote, and assess proposers.
+A core question we tried to answer, was "where do I as a future community member, create / propose a project in the Cardano ecosystem?". In practice, this can be done with [Project Catalyst](https://projectcatalyst.org/), an online platform where community members can learn about how to come up with their own proposals, vote, and assess proposals.
 
-It was important for us to see how easy it was to sign up to, and participate in the Cardano Community. We signed up to Project Catalyst as a standard user so we could evaluate the governance system's practicalities in more detail. Signing up was quite straightforward, as we just signed up with an email address. Unfortunately, we were unable to propose a new project because the deadline had passed, but there was a well-defined interface for doing so, and we quickly found out the different stages/rounds from project ideation to funding a particular "governance round" consists of. These were:
+It was important for us to see how easy it was to sign up to, and participate in the Cardano Community. We signed up to Project Catalyst as a standard user so we could evaluate the governance system's practicalities in more detail. Signing up was quite straightforward, as we just signed up with an email address. 
+
+Unfortunately, we were unable to propose a new project because the deadline had passed, but there was a well-defined interface for doing so, and we quickly found out the different stages/rounds from project ideation to funding a particular "governance round" consists of. These were:
 
 - Proposal
 - Review
@@ -153,42 +161,39 @@ For the sake of brevity, we will concentrate primarily on Governance, but it is 
 
 Inactive proposals are eventually archived.
 
-### Funding rounds
+### Treasury funding
 
-FPs are voted upon during funding rounds. As mentioned, Cardano uses a treasury-model for collective decision making purposes.
+As mentioned, Cardano uses a treasury-model for collective decision making purposes.
 
 Currently, Cardano's treasury system is in Funding round 9 (usually listed as FUND9). The data surrounding the treasury, and its overall funding history, is relatively transparent, but not necessarily easy to understand. The data is generally shared through a shared Google Doc, which is publicly readable, but terminology is defined across various information sources.
 
-### Treasury
+As mentioned, Cardano uses a treasury system to govern the evolution of the protocol. The treasury can be seen as a fund for collective decision making purposes. The treasury is funded in three different ways:
 
-As mentioned, Cardano uses a treasury system to govern the evolution of the protocol. The treasury can be seen as a fund for collective decision making purposes.
+1. when new blocks are minted, a proportion of the rewards goes to the treasury
+2. miners' rewards are taxed, and the tax is collected to the treasury
+3. donations, or charity are also possible venues of funding
 
-### Funding
-
-The treasury is funded in three different ways:
-
-- when new blocks are minted, a proportion of the reward goes to the treasury
-- miners' rewards are taxed, and the tax is collected to the treasury
-- donations, or charity are also possible venues of funding
-
+The funds in the treasury are thereafter used to fund proposals.
 
 ### Voters
 
-Community members, who decides to vote on a project. They do this by depositing an amount of Ada (Cardano native-token). 
+These are community members who decides to vote on the projects proposed in a particular funding round. They do this by depositing an amount of ADA as a security deposit. The more they deposit, the more voting power they have. In other words, their "stake" is proportional to their voting power. Because voting power determines which proposals win, taking a huge risk in a particular voting rode by depositing a lot of stake, leads to "skin-in-the-game", and therefore also accountability. 
 
-They are incentivized to deposit more within a voting round whenever they see proposals they are interested in.
+The voting power deposited within a particular funding round can also be delegated to one, or more experts. This way, voters can make the decision making more efficient by passing their voting power to someone more knowledgeable about the projects proposed in a particular funding round.
+
+However, this also introduces a problem. Since voters are rewarded for participating in the community, and as this reward is proportional to their stake, this model leads to a "rich-gets-richer" scenario, which eventually could lead to a stronger degree of centralization than desirable. That being said, this model thus satisfies the sustainability of partcipation, as per the Blockchain governance framework listed above. Indeed, there would be no reason to participate in anything, if it didn't give you anything in return, and the extent to which this return is favorable, determines whether it is a sustainable model, or not. Therefore, we argue that the staking-based governance protocol used for voters is good. This is because it gives incentives to not only vote, but also to integrate more profoundly into the ecoysystems, by running nodes, creating proposals, and so forth.
 
 ### Experts
 
-A community member, who declares him/herself as an expert on a particular topic and receives "delegated stake".
+A community member, who declares him/herself as an expert on a particular topic. The experts receives "delegated stake", and can use this to have a strong say on which projects end up getting voted on, since delegated stake is accumulative.
 
-This is a particular type of staking mechanism which lets voters delegate their voting power to an expert, without sending his/her coins to them directly.
+It should also be noted that this type of delegative stake a particular type of staking mechanism which lets voters delegate their voting power to an expert, without sending his/her coins to them directly.
 
 ### Committee
 
-A (*partially*) randomly chosen "special" voter (for example someone who has deposited a large stake), which is in charge of tallying and executing the votes. 
+A (*partially*) randomly chosen "special" voter (for example someone who has deposited a large stake), who is in charge of tallying votes.
 
-The likelihood of being selected as a committee member is propotional to the amount of stake a particular voter has deposited, but all randomly chosen committee members, must also confirm their position on the committee with a special transaction.
+The likelihood of being selected as a committee member is propotional to the amount of stake a particular voter has deposited. Nevertheless, all randomly chosen committee members must also confirm their position on the committee with a special registration transaction. 
 
 ## Collective Decision Making
 
