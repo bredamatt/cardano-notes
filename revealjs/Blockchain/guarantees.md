@@ -16,9 +16,11 @@ Liveness and persistence are prioritised and based on $$u$$ and $$k$$ parameters
 
 Liveness: If all honest nodes in the system attempt to include a certain transaction, then after the passing of time corresponding to $$u$$ slots (called the transaction confirmation time), all nodes, if queried and responding honestly, will report the transaction as stable.
 
+Liveness is maintained in Cardano by the following - Each slot that a node is assigned to produce a new block is only 20 seconds. If the node fails to produce a block in that time, the slot remains empty, and the next node is assigned to create the block. There could be major delays in block production if a large number of nodes are unable to product blocks, concurrently, but that is highly unlikely.
+
 * **Fairness:** No systemic discrimination that is against the rules of the protocol
 
-In order to achieve a fair randomized election among stake-holders, entropy must be introduced into the system. They utilize a (simple) secure multiparty implementation of a coin-flipping protocol to produce the randomness for the leader election process (anit-grinding). 
+In order to achieve a fair randomized election among stake-holders, entropy must be introduced into the system. They utilize a (simple) secure multiparty implementation of a coin-flipping protocol to produce the randomness for the leader election process (anti-grinding). 
 
 The protocol assumes that parties can freely create accounts and receive and make payments, and that stake shifts over time.
 
@@ -30,5 +32,6 @@ A possible direction for ameliorating this problem is to share the transaction f
 
 * **Safety:** No conflicting information.
 
-Not sure here.
+Safety supplements liveness. Safety depends on the decentralization and partially on the number of validators in the system. The usage of "Stake Pools" enhances decentralization in the dPoS consensus mechanism. 
+
 ---
