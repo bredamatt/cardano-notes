@@ -6,3 +6,9 @@
 * [Goguen](https://roadmap.cardano.org/en/goguen) (2021): Smart Contracts for defi/dapps
 * [Basho](https://roadmap.cardano.org/en/basho) (WIP): Scaling through sidechains
 * [Voltaire](https://roadmap.cardano.org/en/voltaire) (WIP): Governance through treasury and voting system 
+
+## Languages
+* Haskell
+* [Marlowe](https://developers.cardano.org/docs/smart-contracts/marlowe/)
+* [Plutus](https://developers.cardano.org/docs/smart-contracts/plutus/)
+* [Simon](https://www.cs.tufts.edu/~nr/cs257/archive/simon-peyton-jones/contracts.pdf)
