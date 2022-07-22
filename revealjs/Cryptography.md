@@ -11,7 +11,7 @@ Everywhere else we use BLAKE2b-256 (also 64bit).
 
 ## Does this project use any exotic primitives?  If so, which ones?
 
-
+* Sealed Glass Proofs are proposed in the Cardano Computation Layer, which are a form of zero knowledge proof on a secure enclave.[^1]
 * The verifyVrf function from uses ECVRF-ED25519-SHA512-Elligator2* I havent found anything on exotic primitives (additive homomorphic in voting? - yes)
 
 * [Exotic primitives used in governance](#Cryptographic-aspects-of-governance)
@@ -69,3 +69,4 @@ Following are the primitives used in governance -
 - [Voting and Post-Voting] NIZK's (Non Interactive Zero Knowledge)
   - The world's first honest ZK verifier, which is used to tally votes
 
+[^1] Sealed Glass Proofs - https://eprint.iacr.org/2016/635.pdf
