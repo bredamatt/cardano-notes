@@ -261,7 +261,26 @@ The post-voting stage consists of a:
 - tally stage (when votes are counted)
 - execution stage
 
+It should be noted that the committee members perform the tally and the execution stage. In order to tally votes, they need to decrypt them. Hence, privacy is not satisified in this model.
+
 ### Cryptographic primitives
 
-The primitives used in governance are highlighted [here](../Cryptography.md).
+The primitives used in governance are highlighted [here](../Cryptography.md). 
 
+
+## Summary
+
+Cardano's treasury system is complex, and difficult to evalaute as there is a lack of easily-accessible documentation about its current state. 
+
+Although information is possible to find in the academic paper, and more generally, on the Project Catalyst page, most of the implementation is aimed to reach Voltaire - the final iteration of Cardano, which is yet to be released.
+
+That being said, there is a lot of research which has gone into designing the Cardano governance model, such as:
+
+- Secure liquid democracy model,
+- Treasury system,
+- Delegated stake,
+- Fuzzy voting,
+- Secure distributed key generation protocol, and
+- Non-interactive zero knowledge proofs (NIZK)
+
+When put together, these paradigms leads to a powerful ecosystem where there are incentives to participate. 
