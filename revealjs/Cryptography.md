@@ -4,8 +4,8 @@
 
 * For signatures and verification Cardano uses Ed25519 with added support for HD wallets. Other signatures maybe added through soft forks (in particular BLISS-B for anti-quantum and SECP256k1 for legacy)
 
-* The hashing algorithm for all verification keys and multi-signature scripts is BLAKE2b-224. Explicitly, this is the payment and stake credentials, the genesis keys and their delegates, stake pool verification keys, and VRF verification keys.
-Everywhere else we use BLAKE2b-256.
+* The hashing algorithm for all verification keys and multi-signature scripts is BLAKE2b-224 (64 bit). Explicitly, this is the payment and stake credentials, the genesis keys and their delegates, stake pool verification keys, and VRF verification keys.
+Everywhere else we use BLAKE2b-256 (also 64bit).
 
 
 *

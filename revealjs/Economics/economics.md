@@ -34,7 +34,7 @@ Inflation: 0.3% of the reserve (total supply - in circulation) per epoch (every 
 
 ## Staking 
 
-ADA held on the Cardano network represents a user’s stake in the protocol, the size of which is proportional to the amount of ada held. Important to note is that like other protocols, ADA token holders don't have to lock up there tokens. Users who hold a stake in Cardano can earn passive rewards for validating blocks. The amount of rewards they can earn is proportional to the amount of ada they pledge or delegate to a stake pool.
+ADA held on the Cardano network represents a user’s stake in the protocol, the size of which is proportional to the amount of ada held. Important to note is that like other protocols, ADA token holders don't have to lock up their tokens. Users who hold a stake in Cardano can earn passive rewards for validating blocks. The amount of rewards they can earn is proportional to the amount of ada they pledge or delegate to a stake pool.
 
 ### Stake pool
 
@@ -87,8 +87,7 @@ Two important considerations are:
 
 - Rewards increase with σ, but stop increasing once σ reaches z0, that is. once the pool becomes saturated.
 - If a0, (the pledge influence,) is zero, this formula simply becomes R·σ’, so it is proportional to pool stake, up to the point of saturation. For larger values of a0, the pledge s becomes more important.
-
-Remember that the pledge is declared during pool registration, (alongside the cost and margin values), and has to be honored by the pool owners who are delegating to the pool: If they collectively delegate less than the declared pledge, pool rewards for that epoch will be zero. Note that the pool will be public, if its operator margin is set to less than 100%.
+- If we reach saturation, the share becomes $R \cdot z_0$.
 
 The rewards that are produced by this formula are now adjusted by pool performance: we multiply by β/σa, where β is the fraction of all blocks produced by the pool during the epoch and σa is the stake delegated to the pool relative to the active stake (i.e. total stake that is correctly delegated to a non-retired pool).
 
