@@ -8,7 +8,6 @@
 Everywhere else we use BLAKE2b-256 (also 64bit).
 
 
-*
 
 ## Does this project use any exotic primitives?  If so, which ones?
 

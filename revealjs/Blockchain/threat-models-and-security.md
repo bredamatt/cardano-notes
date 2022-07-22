@@ -2,15 +2,15 @@
 
 ## Two things we liked about the security of Cardano
 
-- TODO
+- TODO maybe the upgradability to new hashing and signing primitives (futureproofing)? 
 
-- TODO
+- TODO nizk for voting or maybe the additive homomorphic encryption for the seed generation?
 
 ## Two things we disliked about the security of Cardano
 
-- TODO
+- TODO The committee seems like a vulnerability
 
-- TODO
+- TODO 
 
 ## How does Cardano protect against common threats?
 
@@ -20,7 +20,7 @@ Proof of Stake empowers the uncoordinated "Generals" to agree, based on the cons
 
 ### 51% Attack
 
-No blockchain can prevent a 51% attack.
+No blockchain (consensus protocol rather?) can prevent a 51% attack (oof). Also, a BGP hijack (routing layer) can easily enable that - no protection mentioned.
 
 ### Sybil Attack
 
@@ -30,4 +30,4 @@ Sybil attacks are prevented in Cardano, by having the concept of "Pledging" of A
 
 ## How does Cardano provide secure transactions?
 
-TODO: not sure what they mean by this question
+TODO: not sure what they mean by this question (hashing?)
