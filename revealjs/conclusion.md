@@ -1,0 +1,17 @@
+
+
+## How do the cryptographic elements, the economic incentives and the blockchain parameters all contribute to the core goals of this blockchain?
+
+Cardano is an overally well designed system for private and secure direct democracy and currency exchange based on proof of stake. 
+
+## Of the things that you identified you liked the _most_, what were the two top things you would highlight?
+
+Liquid democracy, delegated stake
+
+## Of the things that you identified you liked the _least_, what were the two top things you would highlight?
+
+Complexity of the project, paired with bad documentation constitutes a very steep entrance threshold to understanding Cardano
+
+## Describe a way you would devise an attack on this system.
+
+Malicious committee members

@@ -8,9 +8,9 @@
 
 ## Two things we disliked about the security of Cardano
 
-- TODO The committee seems like a vulnerability
+- TODO The committee seems like a vulnerability - e.g. malicious actors can be chosen to the committee 
 
-- TODO 
+- TODO Experts can act maliciously and collude with other experts in this regard in the treasury system
 
 ## How does Cardano protect against common threats?
 
@@ -30,4 +30,6 @@ Sybil attacks are prevented in Cardano, by having the concept of "Pledging" of A
 
 ## How does Cardano provide secure transactions?
 
-TODO: not sure what they mean by this question (hashing?)
+- Hashing of addresses 
+
+- UTXO - prevents double spending, secured by a chain of signatures
