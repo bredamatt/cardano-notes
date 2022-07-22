@@ -165,9 +165,11 @@ Inactive proposals are eventually archived.
 
 As mentioned, Cardano uses a treasury-model for collective decision making purposes.
 
-Currently, Cardano's treasury system is in Funding round 9 (usually listed as FUND9). The data surrounding the treasury, and its overall funding history, is relatively transparent, but not necessarily easy to understand. The data is generally shared through a shared Google Doc, which is publicly readable, but terminology is defined across various information sources.
+Currently, Cardano's treasury system is in Funding round 9 (usually listed as FUND9). The data surrounding the treasury, and its overall funding history, is relatively transparent, but not necessarily easy to understand. The data is generally shared through a shared Google Doc, which is publicly readable, but terminology is defined across various information sources making it not that straightforward to understand what the numbers mean.
 
-As mentioned, Cardano uses a treasury system to govern the evolution of the protocol. The treasury can be seen as a fund for collective decision making purposes. The treasury is funded in three different ways:
+As mentioned, Cardano uses a treasury system to govern the evolution of the protocol. Cardano was not the first platform to do so (the Dash governance system invented the treasury model). In a treasury system, the collective decides upon where funding goes. Hence, the amount of funds in the treasury becomes an important decision makign factor. 
+
+In the Cardano governance system, the treasury is funded in three different ways:
 
 1. when new blocks are minted, a proportion of the rewards goes to the treasury
 2. miners' rewards are taxed, and the tax is collected to the treasury
@@ -176,28 +178,47 @@ As mentioned, Cardano uses a treasury system to govern the evolution of the prot
 The funds in the treasury are thereafter used to fund proposals.
 
 ### Voters
+These are community members who decides to vote on the projects proposed in a particular funding round. They do this by depositing an amount of ADA as a security deposit. The more they deposit, the more voting power they have. Because voting power determines which proposals win, taking a risk in a particular voting round by depositing ADA, leads to "skin-in-the-game", and therefore also accountability. 
 
-These are community members who decides to vote on the projects proposed in a particular funding round. They do this by depositing an amount of ADA as a security deposit. The more they deposit, the more voting power they have. In other words, their "stake" is proportional to their voting power. Because voting power determines which proposals win, taking a huge risk in a particular voting rode by depositing a lot of stake, leads to "skin-in-the-game", and therefore also accountability. 
+Still, it is possible that an inexperienced voter with large degree of stake disrupts the funding round by accidentally, or deliberately voting for a suboptimal proposal from a Pareto efficiency perspective. Yet, the extent to which voters with large stake would not want the best result for the collective is questionable since a bad outcome is something they themselves would be held accountable for. Additionally, there are opportunities to delegate stake to a funding round "expert", and this delegation mechanism is particularly valuable to give unknowledgable, but what may potentially be disruptive voters (by accident in this case) the ability to reach Pareto optimality to a greater extent.
 
-The voting power deposited within a particular funding round can also be delegated to one, or more experts. This way, voters can make the decision making more efficient by passing their voting power to someone more knowledgeable about the projects proposed in a particular funding round.
+In summary, it seems that the Cardano governance system implements *liquid democracy* to solve the problem of votes being passed **accidentally** to Pareto inefficient proposals. Because it is a choice whether to delegate, or not, there are *no guarantees* of Pareto efficiency as a consequence.
 
-However, this also introduces a problem. Since voters are rewarded for participating in the community, and as this reward is proportional to their stake, this model leads to a "rich-gets-richer" scenario, which eventually could lead to a stronger degree of centralization than desirable. That being said, this model thus satisfies the sustainability of partcipation, as per the Blockchain governance framework listed above. Indeed, there would be no reason to participate in anything, if it didn't give you anything in return, and the extent to which this return is favorable, determines whether it is a sustainable model, or not. Therefore, we argue that the staking-based governance protocol used for voters is good. This is because it gives incentives to not only vote, but also to integrate more profoundly into the ecoysystems, by running nodes, creating proposals, and so forth.
+#### Voter rewards
+
+Voters are rewarded proportional to the amount they deposited. As in traditional governance systems, this will naturally lead to a stronger degree of centralization with time since voters who deposit larger values are also rewarded accordingly. 
+
+Generally, there is no clear logical conncetion between centralization and a lack of ecosystem sustainability. Many systems which are relatively centralized could exhibit sustainable behavior. Indeed, if the system's sustainability is harmed by centralisation, it tends to be a consequence of corrupt decision-makers rather than centralisation per se. In other words, ineffiency could be a indirect consequence of centralisation, but not always a direct one.
+
+Furthermore, the exact cause of corruption is not always clear in centralised systemsd, but would generally be stated to be the outcome of there existing some rational decision existing which incentivizes an agent *enough* to deviate from the Pareto efficient goal for the collective. Thus, there could be some correlation between maximizing collective utility and decentralization as long as it is decentralized *enough*, where any central decision maker's swaying power does not provide *enough* guarantees for profiting from a deviation. Therefore, it is important that a governance system satisfies the suffrage definition, and makes participating in the protocol easy. As mentioned, it was very straightforward to sign up to Catalyst, and as it is possible to delegate to experts (see below).
+
+However, suffrage per se is not representative enough as a measure of decentralization in the Cardano goverance system since voting power is based on the amount of ADA a particular voter deposits. That being said, a single voter would need to have a significant amount of ADA to skew the votes such that the result is in their favour, and the probability of one individual voter owning that much ADA is quite small (nevertheless possible). Alternatively, he/she would need to collude with a significant number of other voters to disrupt the Pareto efficent outcome of the funding round. Furthermore, this becomes less likely the more participants there are in the system. Recent figures indicate more than 250,000 participants in the last funding round, therefore we argue that it is difficult, to convince a significant enough number of participants to deviate from the collective good of Cardano's ecosystem once they signed up to it.
 
 ### Experts
 
-A community member, who declares him/herself as an expert on a particular topic. The experts receives "delegated stake", and can use this to have a strong say on which projects end up getting voted on, since delegated stake is accumulative.
+As mentioned, Cardano uses a liquid democracy for their collective decision making. Experts are those voters who also receive "delegated stake". Therefore, if anyone has incentives to skew the vote, it would be experts with significant delegated stake since they would potentially have enough voting power to influence the funding round's outcome.
 
-It should also be noted that this type of delegative stake a particular type of staking mechanism which lets voters delegate their voting power to an expert, without sending his/her coins to them directly.
+An interesting feature of the expert is that it also facilitates greater participation in the governance system, since anyone who holds some ADA can participate in the funding round, and simply delegate their votes to an expert. As such, it seems like a reasonable approach to guarantee participation sustainability as it lowers the knowledge barrier requirement for meaningful participation.
+
+#### Expert rewards
+
+Similarly to how voters are rewarded proportionally to their stake, experts are rewarded proportionally to the sum of their delegated stake. This means that to truly benefit as an expert in the Cardano ecosystem, experts really need to be viewed as such for voters to trust them with their stake. Furthermore, this creates an incentive to become knowledgable about the ecosystem - since the likelihood of reaping participation rewards are significantly higher as an expert than as a voter. 
+
+Still, an expert could socially engineer a large set of voters to trust him/her and deviate from his/her "promises" if they are more knowledgeable, but in the long-run, such a tactic may not work as the likelihood of being caught is large. Indeed, it would be more rational to maintain a dominant position as a "more than average" knowledgeable person and reap consistent reweards, than to potentially reap high rewards once.
+
+Interestingly enough, experts are also free to delegate their accumulated votes to other experts. This means that there are situations were a subset of the total set of experts end up with significant stake, at which point they may be incentivized to deviate to greater degree. 
 
 ### Committee
 
-A (*partially*) randomly chosen "special" voter (for example someone who has deposited a large stake), who is in charge of tallying votes.
+The committee is crucial for the Cardano governance system. Think of the committee as being analagous to miners in a generic blockchain consensus system as both miners and the committee makes sure the system satisfies the liveness criteria of the protocol.
 
-The likelihood of being selected as a committee member is propotional to the amount of stake a particular voter has deposited. Nevertheless, all randomly chosen committee members must also confirm their position on the committee with a special registration transaction. 
+There is a difference however. In Cardano, there are up to `k` randomly chosen committee members, but there is only `1` randomly selected block author per round in the blockchain consensus layers. Their fundamental role is not to produce blocks, but rather to tally the votes committed by experts and voters and guarantee that no other committee members lies. Consequently, they are crucial for maintaining Cardano's governance system's "verifiability" concern.
 
-## Collective Decision Making
+That being said, the consensus algorithm used to agree on a particular tally amongst the `k` committee members differs from that of agreeing on a particular block.
 
-The way the treasury funds are spent, is decided via a collective decision making process, split up into three epochs:
+### Evaluating the 
+
+he Cardano governance period is crucial to a funding round. It consists of three epochs: 
 
 1. Pre-voting epoch,
 2. Voting epoch, and
@@ -230,10 +251,10 @@ $${Yes, No, Abstain }$$
 ### Post-voting epoch
 
 During the post-voting epoch, each voting committee member will post the encrypted form of a part of the group $$\mathbb{G}$$
+are in stead voters which are randomly chosen with some probability, where the larger the stake in a voting round deposited by a voter, the greater the probability of being chosen. Currently, the number `k` is defined at 500, which means there would be about 500 committee members per funding round. This does not mean much without context, however. The last funding round had around 250,000 voters participating, so `k` is therefore significantly smaller than `n` where `n` represents number of votrers.
 
-### Liquid democracy
+It is also worthwhile mentiuoning that once a randomly chosen committee member has been randomly chosen to participate in the committee, the voter himself must confirm their position on the committee with a special registration transaction.
 
-A liquid democracy is a combination of a direct, and representative democracy. In a direct democracy, everyone votes for every proposal. In a representative democracy, all voters vote for representative, who make all the decisions. In a liquid democracy, all voters can voters can vote directly on a proposal, or they can delegate their votes to an expert. This is useful in scenarios when a voter does not necessarily know enough about a particular proposal, and wants their voting weight, as votes are determined by the amount of Ada staked, to be delegated to someone the voter believes to be more knowledgable about a particlar project.
 
 ### Cryptographic primitives
 
