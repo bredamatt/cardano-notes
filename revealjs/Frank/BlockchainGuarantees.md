@@ -14,7 +14,12 @@ declared stable if in a block that is more than *k* blocks deep in the ledger.
 
 Liveness: If all honest nodes in system attempt to include a transaction then, after the passing of time
 corresponding to *u* slots (called the *transaction confirmation time*), all nodes, if queried and responding honestly,
-will report the transaction as stable.
+will report the transaction as stable. 
+
+Persistence and liveness derived from three properties:
+- Common prefix
+- Honest chain growth
+- Existential chain quality
 
 ## Fairness
 No systemic discrimination that is against the rules of the protocol

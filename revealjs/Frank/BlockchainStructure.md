@@ -39,9 +39,11 @@ The first "provably secure" proof-of-stake blockchain protocol, which had the ab
 randomness in the slot leader selection algorithm. Randomness was added to the protocol via the `entropy parameter`, 
 with the value being calculated by events not known in advance. 
 
-Ouroboros selects a slot leader via randomly selecting stakeholders to form a committee in regular intervals called 
-epochs. The committee then randomly selects a public leader schedule for the next epoch, which determines which 
-stake pool is eligible to propose which slot within the epoch.
+Ouroboros selects a slot leader via randomly selecting stakeholders (weighted by stake) to form a committee in regular 
+intervals called epochs. The committee forms a public leader schedule for the next epoch, which determines which stake 
+pool is eligible to propose a block for which slot within the epoch. Slot leaders produce blocks along with a 
+cryptographic proof, which is then verified by other network participants before being 
+diffused to others to perform protocol synchronisation.
 
 #### Byzantine Fault Tolerance
 The second implementation enabled deterministic consensus through synchronous communication.
@@ -55,6 +57,8 @@ blockchain. It secures against adaptive attackers using forward secure signature
 
 It also made the chain more modular, to allow better composition: e.g. network delegation, sidechains, checkpoints,  
 different RNG, different sync assumptions and light client data structures.
+
+Slot leader kept private so cannot be determined in advance, but once announced VRF key used to prove eligibility.
 
 * Adaptive Corruption
 * Partial/Semi-Synchronous Model

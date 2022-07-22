@@ -89,14 +89,3 @@ Aaryamann, Adam, Anton, Daan, Mattia, Frank
 [^1]: https://cardano.org
 [^2]: [Guogen Era](https://roadmap.cardano.org/en/goguen) (Sep 2021) using Haskell, Simon, Plutus, Marlowe languages
 [^?]: Additional source: https://www.cryptoeq.io/corereports/cardano
-
----
-## Extra Credit/Stretch Goal
-
-* Implement the attack described in the conclusion
-* Propose an improvement to one or two aspects of your critique and implement it
-
-
-
-
-
