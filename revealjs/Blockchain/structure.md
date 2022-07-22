@@ -17,8 +17,30 @@ the project is maddening.~~
 
 ## Core elements
 * What are the core elements of the application stack?
+
+Cardano splits it's application into two main segments, the settlement layer and the computation layer.
+Both run the Ouroboros Praos consensus algorithm.
+
 ### Cardano Settlement Layer (CSL)
+This layer handles the accounting and ledger actions a blockchain will make throughout it's lifetime.
+
+Their roadmap suggests that the settlement layer will include the following:
+
+1. Support two sets of scripting languages, one to move value and another to enhance overlay protocol support.
+**This is already implemented via the Marlowe and Plutus programming languages**
+1. Provide support for KMZ sidechains to link to other ledgers
+**This is not yet implemented**
+1. Support multiple types of signature including quantum resistant signatures for higher security
+**This is not yet implemented**
+1. Support multiple user issued assets
+**This is not yet implemented**
+1. Achieve true scalability, meaning as more users join, the capabilities of the system increase
+**This is not yet implemented**
+
 ### Cardano Computation Layer (CCL)
+The CCL is inspired by the Rootstock[^5] smart contract platform on Bitcoin.
+This will enable the development of specialized protocols that can help Cardano scale over the years. Among the discussed technology are Sealed Glass Proofs, which 
+The reasoning behind the CCL’s implementation lies in its ability to help scale specialized protocols over the years. This involves adding hardware security modules (HSM) to the existing stack of protocols as technology advances.
 
 ## Consensus algorithm
 The consensus algorithm that is used is Ouroboros Praos[^2].
@@ -73,6 +95,27 @@ The anatomy of a block is as follows[^1]:
 }
 ```
 
+### Header
+The previous block header is denoted by `prev` which is a BLAKE2b-256 hash of the previous block header,
+which gets checked in the **chain** transition of the STF and will fail if the previous block hash does not match.
+
+The protocol version is stored in `pv` which gets checked in the **chain** transition of the STF and will fail on a major version mismatch.
+
+The `bsize` and `bhash` fields are checked in the **block body**  transition and will fail if they do not match.
+`bsize` is also compared in the **chain** transition and will fail early if it does not match.
+
+The **block body** also  extracts the `vk` block issuer and the `blockno` block number is checked.
+
+The operational certificate, `oc`, is used by the **operational certificate** state transition to validate that the staking pool
+that created the block was eligible to do so.
+
+The slot leader is determined by a VRF. The inputs of the VRF are the block's `slot`, the VRF verification key `vrfVk` and the `nonce` which is derived from hash made of 2/3 blocks from the previous epoch.
+This can be verified with the nonce proof `prf_n` and leader election proof `prf_l`.
+This all happens in the **overlay** transition and it's sub transitions.
+
+### Transactions
+A set of UTXO based transactions.
+
 ## State transition function
 The state transition function (STF)[^3] is defined by the **chain** transition.
 
@@ -86,7 +129,7 @@ Ensures that:
 - The block number is incremented one
 - The prev hash matches the hash of the previous block header
 - The size of the block header is smaller than the maximum block header size of the protocol
-- The size of the block body is smaller than the maximum block body size of the protocol
+- The size of the block body is smaller than the maximum block body size of the protocol.
 At a later point, the block body size will be compared to the claimed size in the block header
 - The protocol version field is not out of date, i.e. that the major version is larger than or equal to the MaxMajorPV constant.
 - The **chain** transition calls the **block body**, **tick** & **protocol** sub-transitions
@@ -101,9 +144,13 @@ Ensures that:
 
 #### Overlay transition
 Ensures that:
-- The **Ocert** sub-transition finishes
+- The **operational certificate** sub-transition finishes
 
-##### Ocert transition
+##### Operational certificate transition
+Ensures that:
+- The KES period of the current slot in the block header must be greater than or equal to the value listed in the supplied operational certificate and less than the agreed upon lifetime of the operational certificate.
+- The signature can be verified with the cold verification key
+- The KES signature can be verified with the hot verification key
 
 #### Update nonces transition
 Ensures that:
@@ -230,5 +277,9 @@ Ensures that:
 [^1]: Block specification - https://hydra.iohk.io/build/4975913/download/1/ledger-spec.pdf#subsection.12.2
 
 [^3]: Transition rule dependencies - https://hydra.iohk.io/build/4975913/download/1/ledger-spec.pdf#section.14
+
+[^4]: Application stack diagrams - https://www.altcoinbuzz.io/cryptocurrency-news/blockchain-technology/cardano-architecture-as-explained-by-iohk/
+
+[^5]: Rootstock - https://www.rsk.co/
 
 ---
