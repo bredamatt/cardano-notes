@@ -163,13 +163,52 @@ Inactive proposals are eventually archived. The definition of inactive is unclea
 
 #### Voltaire periods
 
-In the Voltaire period, the number of rounds is simplified to:
+In the Voltaire period, the number of rounds dedicate dto:
 
-- Pre-voting phase,
-- Voting phase,
-- Post-voting phase,
+- Pre-voting / setup,
+- Voting,
+- Post-voting,
 
-Hence it is clear that there are some differences between the two. It seems additional focus has been placed on review and QA in Catalyst, potentially due to the fact that it is not as secure as Voltaire would be, but this is not easy to say from the sources we have available to us.
+Hence it is clear that there are some differences between Catalyst and Voltaire. It seems additional focus has been placed on review and QA in Catalyst, potentially due to the fact that it is not as secure as Voltaire would be, but this is not easy to say from the sources we have available.
+
+#### Pre-voting
+
+During the pre-voting stage, two things happen:
+
+- projects are proposed as described above, and
+- voters and experts register by submitting special transactions on the blockchain including a security deposit that locks up some stake for the governance round.
+
+Registration is supported in various ways, such as through: 
+
+- Daedalus Mainnet (desktop, Ledger Nano S and X, Trezor T)
+- Yoroi mobile (iOS and Android, Ledger Nano S)
+- Yoroi browser extension (desktop, Ledger Nano S and X)
+- AdaLite-Ledger (desktop, hardware wallet, no mobile support)
+- AdaLite-Trezor (desktop, hardware wallet, no mobile support)
+- Adalite-Mnemonics (desktop, software wallet)
+- Typhon Wallet
+- CCVault
+- Hardware wallet via CLI interface + Guide
+- VotingTools CLI
+
+There also exists a set of applications that are available on laptop, browser and smart phone for voting purposes. Details can be found here: ["Catalyst Registration and Voting Guide"](https://iohk.zendesk.com/hc/en-us/articles/900005679386-Catalyst-registration-and-voting-guide).
+
+#### Voting 
+
+During the voting epoch there are three main things for the participants to partake in:
+
+- committe selection stage,
+- distributed key setup stage for committee members, 
+- ballot casting stage for voters and experts,
+
+#### Post-voting 
+
+The post-voting stage consists of a:
+
+- tally stage (when votes are counted by the committee)
+- execution stage
+
+To tally votes, committee members need to decrypt them. Hence, secrecy / privacy is not satisified at a global level.
 
 ### The treasury system
 
@@ -187,20 +226,24 @@ In the Cardano governance system, the treasury is funded in three different ways
 2. miners' rewards are taxed, and the tax is collected by the treasury
 3. donations, or charity are also possible venues of funding proposals
 
-It has been shown (see the Treasury link above) that the treasury appears to be growing in value. It is not clearly documented who owns the private keys for the treasury accounts, however.
+It has been shown (see the Treasury link above) that the treasury appears to be growing in value. This could be interpreted in various ways, but one clear way would be to state that the current funding mechanisms are overestimating the fund requirements. Since it is not clearly documented who owns the private keys for the treasury accounts, however, it is easy to become skeptical about what would happen in  worst case scenario (as in say the Cardano ecosystem becomes subject to regulatory scrutiny and all ecosystem participation becomes illegal for example).
 
 ### Voltaire in detail
 
-First and foremost Voltaire is designed to utilize a *fuzzy voting system*.
+For this analysis we will focus on the design outlined in this paper: ["A Treasury System for Cryptocurrencies:
+Enabling Better Collaborative Intelligence"](https://eprint.iacr.org/2018/435.pdf).
 
-Voltaire, and the Cardano governance system is focused on defining consensus not necessarily on the terms of "unanimous agreement", but in stead on a set of metrics that indicate the extent to which voters vote according to the priorities of the community. They thereafter use the set of metrics estimated per voting phase to provide feedback to voters, to satisfy both the verifiability definition above. In this way, voters can be re-assured that their vote is their "true" vote.
+First and foremost Voltaire is designed to utilize a *fuzzy threshold voting system*. In such a system there is a ranking of proposals based on the number of votes *for* each proposal, minus the number of votes *against*, whilst checking that the remainder is at least 10% of all votes recorded to make sure that it isn't arbitrary which proposal is favoured (ie. there needs to be some threshold for proposals to "win" a funding round). This is to make sure that only those proposals which win by a certain degree of certainty are funded. 
 
-Additionally, there are other benefits related to distributing such metrics, as the information provided by the feedback loop gives community members the ability to sense the extent to which they may need to adjust their preferences to align with the community. Although it is arguable that such a metric-based approach can potentially lead to a skewed vote outcome, the Cardano research team refers to other academic work focused on the nature of consensus in large groups as representative of the benefits of such an approach. Furthermore, the purpose behind this design decision 
+Additionally, the voting system provides a set of metrics estimated per voting phase to provide feedback to voters as to how far away their vote is from the community's sentiment. This feedback loop gives community members the ability to sense the extent to which they may need to adjust their preferences to align with the community, and arguably push the outcome towards a Pareto efficient outcome, under the assumptions they are acting "good". Alternatively, a malicious community member could also use it as a way to optimize towards selfish behavior. 
+
+Now that we know at a high level how the voting system works, we should evaluate the incentives of voters, experts and committee members to act for the common good in the Cardano governance system.
 
 ### Voters
-These are community members who decides to vote on the projects proposed in a particular funding round. They do this by depositing an amount of ADA as a security deposit. The more they deposit, the more voting power they have. Because voting power determines which proposals win, taking a risk in a particular voting round by depositing ADA, leads to "skin-in-the-game", and therefore also accountability (if you lose by making a poor voting decision, you lose your ADA).
 
-Still, it is possible that an inexperienced voter with large degree of stake disrupts the funding round by accidentally, or deliberately voting for a suboptimal proposal from a Pareto efficiency perspective. Yet, the extent to which voters with large stake would not want the best result for the collective is questionable since a bad outcome is something they themselves would be held accountable for. Additionally, there are opportunities to delegate stake to a funding round "expert", and this delegation mechanism is particularly valuable to give unknowledgable, but what may potentially be disruptive voters (by accident in this case) the ability to reach Pareto optimality to a greater extent.
+These are community members who decides to vote on the projects proposed in a particular funding round. They do this by depositing an amount of ADA as a security deposit in the pre-voting phase. The more they deposit, the more voting power they have, in other words, their voting power is proportional to their stake. 
+
+Still, it is possible that an inexperienced voter with large degree of stake disrupts the funding round by accidentally, or deliberately voting for a suboptimal proposal from a Pareto efficiency perspective. Yet, the extent to which voters with large stake would not want the best result for the collective is questionable since a bad outcome is something they would lose from.  Additionally, there are opportunities to delegate stake to a funding round "expert", and this delegation mechanism is particularly valuable to give unknowledgable, but what may potentially be disruptive voters (by accident in this case) the ability to reach Pareto optimality to a greater extent.
 
 In summary, it seems that the future Cardano governance system aims to implement *liquid democracy* to partially solve the problem of votes being passed **accidentally** to Pareto inefficient proposals. Because it is a choice whether to delegate, or not, there are *no guarantees* of Pareto efficiency as a consequence.
 
@@ -243,30 +286,6 @@ As mentioned, the more interesting aspects of the committee members behavior is 
 1. Pre-voting/preparation stage,
 2. Voting stage, and
 3. Post-voting stage
-
-#### Pre-voting
-
-During the pre-voting stage, two things happen:
-
-- projects are proposed as described above, and
-- voters and experts register by submitting special transactions on the blockchain and locking up some stake
-  
-#### Voting 
-
-During the voting epoch there are three main things for the participants to partake in:
-
-- committe selection stage,
-- distributed key setup stage, 
-- ballot casting stage
-
-#### Post-voting 
-
-The post-voting stage consists of a:
-
-- tally stage (when votes are counted)
-- execution stage
-
-It should be noted that the committee members perform the tally and the execution stage. In order to tally votes, they need to decrypt them. Hence, privacy is not satisified in this model.
 
 ### Cryptographic primitives
 
