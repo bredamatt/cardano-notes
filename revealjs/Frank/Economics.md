@@ -101,6 +101,7 @@ Factors considered by the delegator:
 Benefits: 
   * 3-5% APY return for staking, depending on the stake pool
   * No lock-up/unbounding period
+  * No requirement of setting up a node
 
 Delegators are therefore free to move their stake to another pool if existing pool operator does not provide a fair 
 return or behave in the interests of protocol. A snapshot of pool participants is taken at each epoch (and used with delay of one epoch), so stake pool operator could 
@@ -109,33 +110,24 @@ lose staking 'power' relatively quickly (within 2 epochs or 10 days).
 ## Economic Incentives
 Cardano has aligned its economic incentives to encourage decentralization, which it deems as critical to the long-term
 success of the project. Rewards are therefore shared between delegators and stake pool operators, a symbiotic
-relationship maximising rewards so long as they are rational (Nash equilibrium).
+relationship maximising rewards so long as they are rational.
+
+The protocol incentivizes validators to stay honest and online. Penalisation of malicious participants is deemed to
+be unnecessary, provided the desired number of pools exist, and they are in Nash equilibrium[^6]
+
+Cardano's incentive mechanisms seeks a balanced distribution of stake across stake pools, relying on the (perfect) 
+competition of pools to find a market equilibrium where rewards are optimal for all when stake is delegated evenly 
+across pools.
+
+![img_3.png](img_3.png)  
+Source: https://blogs.ed.ac.uk/blockchain/2022/04/19/pool-splitting-behaviour-and-equilibrium-properties-in-cardano-rewards-scheme/
 
 This design also allows economic specialisation: stake pool operators have the time, technical expertise and 
 capital to run nodes which secure the network. Delegators may have none of these, instead delegating 
 their stake to a stake pool to increase the overall pool stake, thereby increasing the probability of the stake pool 
 being elected to earn block rewards.
 
-Cardano's incentive mechanism seeks a balance across staking pools, where an equilibrium means that rewards are 
-optimal for all when stake delegated evenly across pools. A cap on stake pool size 
-
-* Staking pool operators are incentivized to remain online in order to be elected as a slot leader, thereby being
-  granted the right to produce a block and claim the corresponding reward.
-
-
-Stake pools can determine own commission rates and stakers can delegate their stake to any staking pool with no
-  lock-up period. This means they are free to switch to another pool at any time, should a pool with a more
-  attractive rate become available. This leads to a natural market equilibrium as stakers delegate to pools with the
-  most favourable rates.
-
-![img_3.png](img_3.png)
-
-* Perfect competition: stake pools arrange until an equal distribution across pools
-* No slashing: protocol incentivizes validators to stay honest and online. Penalisation of malicious participants
-  unnecessary provided desired number of pools exist, and they are in Nash equilibrium[^6]
-
 ## Pros and Cons
-
 * Rewards shared between stake pool operators and delegators, no lock up period so delegators can easily re-stake with
   another operator if a stake pool performs poorly or its operator behaves maliciously (liquid democracy).
 * No slashing, reducing delegator staking risk.
