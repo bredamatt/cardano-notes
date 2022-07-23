@@ -58,47 +58,62 @@ and the stakers which delegated to the pool. Stake pool operators take a commiss
 operators/delegators and 20% to the treasury. The treasury (aka 'pot') is used for funding projects, improvements 
 and the long term sustainability of Cardano.
 
-Rewards will therefore ultimately be comprised of transaction fees only, once the reserve supply has been depleted.
+Rewards will therefore ultimately be comprised solely of transaction fees, once the reserve supply has been 
+depleted.
 
-#### Staking (WIP):
+#### Staking Mechanics
+Cardano uses stake pools as a mechanism for the distribution of rewards among stake participants, optimised by 
+protocol-specific parameters which can be tuned as required:
 
-Pool Mechanics:
-* Fixed cost of 340 ADA per pool, covering operating costs
-* **Margin**: operator commission fee
-* **Pledge amount**: validators own stake and commitment to the pool
-* **Saturation Parameter** (parameter "k"): defines how many pools and estimated cap of stake to guarantee
-  decentralisation
-* No rewards on excess stake above cap, forcing large operators to create many pools which compete. Saturation point ~68m ADA
-* Delegators will move to another pool if operator does not behave in interests of protocol
-  * Snapshot of participants at each epoch (and used with delay of one epoch), so operator can lose power within 2
-    epochs (10 days)
+<span style="text-decoration: underline">**Stake Pools:**</span>
 
-Delegators:
-* Other factors to be considered by the staker:
-  * pool performance: a stake pool operator which misses slots is missing out on rewards, which are shared with
-    those stakers delegated to the pool
-  * decentralisation:
-  * fees: fixed fees (amount taken from total epoch rewards) and margin (amount taken from total epoch rewards after
-    fixed fees deducted, used to cover pool running costs). The remaining rewards are distributed to stakers.
+Protocol Parameters:
+  * **Pledge Influence Parameter *a0***:
+    * Rewards are adjusted based on pledge amount (i.e. influence of pledge on pool rewards), which encourages 
+      operators to control fewer pools with higher pledge
+    * Increasing pledge amount increases rewards by a factor of up to *a0*, currently set to 0.3
+    * Mechanism to prevents Sybil attacks on the network
+  * **Saturation Parameter *k***:
+    * Saturation is the level at which the rewards distributed to a pool's delegators starts to decrease 
+      (diminishing returns)
+    * encourages growth in number of pools, and therefore distribution of delegated stake, by setting optimal number
+      of pools
+    * This results in a cap at which point the stake pool no longer earns rewards, which incentivizes the creation of new pools
+    * The parameter therefore defines number of pools and estimated cap of stake to guarantee decentralisation
 
-TODO
-- pool operators set own fees
-- 3-5% APY staking reward for delegators
-- 24.5b ADA staked across ~3200 pools (~70% circulating supply), with ~1.1m delegators[^3]
-- designed to be decentralised through saturation parameter ("parameter K"), whereby pool has a saturation point
-  (cap) at which it no longer earns rewards
-- 80/20
-  - todo - does the 20/80 split make sense?
-- No lock-up/unbounding period (3 epoch initial latency period)
+Stake Pool Operator:
+  * **Pool Fixed Cost**: fixed cost per pool (340 ADA), covering operating costs
+  * **Pool Margin**: commission fee determined by the stake pool operator, after fixed costs
+  * **Pool Pledge**: 
+    * validators own stake and commitment to the pool for as long as it operates 
+    * No minimum, but pools with higher pledge will receive higher rewards
+
+<span style="text-decoration: underline">**Delegators:**</span>
+
+Factors considered by the delegator:
+  * **Pool Performance**: a stake pool operator which misses slots is missing out on rewards, which are shared with
+    the pool.
+  * **Decentralisation**: current configuration of pools and their centralisation around larger operators, for the 
+    sake of the protocol. A delegator can also delegate to multiple pools.
+  * **Fees**: fixed fees (amount taken from total epoch rewards) and margin (amount taken from total epoch rewards after
+    fixed fees deducted, used to cover pool running costs). The remaining rewards are distributed to delegated stakers.
+ 
+Benefits: 
+  * 3-5% APY return for staking, depending on the stake pool
+  * No lock-up/unbounding period
+
+Delegators are therefore free to move their stake to another pool if existing pool operator does not provide a fair 
+return or behave in the interests of protocol. A snapshot of pool participants is taken at each epoch (and used with delay of one epoch), so stake pool operator could 
+lose staking 'power' relatively quickly (within 2 epochs or 10 days).
 
 ## Economic Incentives
 Cardano has aligned its economic incentives to encourage decentralization, which it deems as critical to the long-term
 success of the project. Rewards are therefore shared between delegators and stake pool operators, a symbiotic
 relationship maximising rewards so long as they are rational (Nash equilibrium).
 
-This design also leverages economic specialisation: stake pool operators have the time, technical expertise and 
-sufficient capital to run nodes which secure the network. Delegators may have none of these, instead delegating 
-their stake to a stake pool, thereby increasing the overall stake and increasing the probability of the stake pool 
+This design also allows economic specialisation: stake pool operators have the time, technical expertise and 
+capital to run nodes which secure the network. Delegators may have none of these, instead delegating 
+their stake to a stake pool to increase the overall pool stake, thereby increasing the probability of the stake pool 
 being elected to earn block rewards.
 
 Cardano's incentive mechanism seeks a balance across staking pools, where an equilibrium means that rewards are 
@@ -106,8 +121,7 @@ optimal for all when stake delegated evenly across pools. A cap on stake pool si
 
 * Staking pool operators are incentivized to remain online in order to be elected as a slot leader, thereby being
   granted the right to produce a block and claim the corresponding reward.
-* **Saturation Point** (parameter *k*): stake pools have a cap at which point they no longer earn rewards, incentivizing
-  the creation of new pools.
+
 
 Stake pools can determine own commission rates and stakers can delegate their stake to any staking pool with no
   lock-up period. This means they are free to switch to another pool at any time, should a pool with a more
