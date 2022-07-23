@@ -1,10 +1,8 @@
 # Governance
 
-Governance in the blockchain space could mean many different things, but in this case, it refers specifically to how the community is capable of "steering" the evolution of the blockchain system. 
+Governance in the blockchain space could mean many different things, but in this case, it refers specifically to how the platform's community can shape the evolution of the blockchain system. 
 
-One way we can assess the "value" of a particular governance model is to use the more recently devised Blockchain Governance framework from IOHK: [Blockchain Governance](https://arxiv.org/pdf/2201.07188.pdf)
-
-In this paper, there are 7 properties we can base our evaluation on:
+One way we can assess the "value" of a particular governance model is to use the more recently devised Blockchain Governance framework from IOHK: [Blockchain Governance](https://arxiv.org/pdf/2201.07188.pdf). This should help us analyse the quality of any Blockchain Governance framework through a specific set of desirable properties. Here, there are 7 properties we can base our evaluation on:
 
 1. Suffrage
 2. Pareto Efficiency
@@ -14,19 +12,15 @@ In this paper, there are 7 properties we can base our evaluation on:
 6. Sustainability
 7. Liveness
 
-These definitions will be discussed loosely as we evalaute the different components that constitute the Cardano governance system. But first, let us define  why we need a governance system.
+Before we analyse Cardano's Governance system let us define  why we need a governance system to begin with.
 
 ## Purpose
 
-For any ecosystem to have a sustainable future, it is necessary to govern a system's evolution. Yet the key point, is to figure out in which direction the ecosystem is evolving (to something better, or worse?).
+For any ecosystem to have a sustainable future, it is necessary to govern the system's evolution. Yet the key point is to figure out in which direction the ecosystem is evolving (to something better, or worse?). Because Cardano is software, a core component of Cardano's governance model is to ensure that the platform, and its related tools and projects evolve sustainably.However, Blockchain systems push software governance to the limit since their ecosystems are more like communities with financial incentives, very much like our everyday economy. Hence, one may also argue that sustainable governance of the Cardano ecosystem is somewhat tied to the sustainable growth of its financial system.
 
-It is quite common to state that the purpose of a governance system is to maximize the utility of its participants. It follows that we need to know what the utility function of a participant in the community would be, but for now we can simply state it is about a positive evolution of the Cardano ecosystem. An example of this would be when meaningful projects and use-cases are implemented on the Cardano blockchain. 
+In general, governance problems arise whenever it becomes rational for an individual actor to game / play the system for his/her own benefit at the expense of the common good of the community. Hence, we could say that a particular governance system is good only as far as it makes it rational for system participants to act in the interest of the common good. A well-designed governance mechanism would also be capable of incentivizing agents, or at least indirectly making them act in the interest of the common good, even when it may initially appear rationally not to, or when they may attempt to deviate from the common good.
 
-In general, governance problems arise whenever it becomes rational for an individual actor to game / play the system for his/her own benefit at the expense of the common good of the community. Hence, we could say that a particular governance system is good only as far as it makes it rational for system participants to act in the interest of the common good. In other words, a well-designed governance mechanism would also be capable of incentivizing agents, or at least indirectly making them act in the interest of the common good, even when it may initially appear rationally not to.
-
-The above points are important to take into consideration when assessing the Cardano governance mechanism with respect to the Blockchain Governance definitions below.
-
-In general, however, we can say that a governance system is focused on maximizing the utility of its community members by guaranteeing that the 7 definitions are satisfied.
+In general, however, we can say that a governance system is focused on maximizing the utility of its community members by guaranteeing that the 7 definitions are satisfied, so we may generally state that there could be an optimal fucntion $\lambda$ that maximizes the utility of the community $U$, given some definition $x_{i}$ for $i \in [1,...,7]$. This would however require us to know how to maximize each individual definition, and as will be clear, is not necessarily that straightforward as these definitions are somewhat interrelated.
 
 ## Blockchain Governance definitions
 
@@ -71,7 +65,7 @@ Usually, split between:
 
 *"A blockchain governance system satisfies the property of accountability if whenever participants bring in a change, they are held individually responsible for it in a clearly defined way by the platform."*
 
-Think of this as "Skin-in-the-Game". Parties participating in the governance system are incentivized to do good because they themselves are accountable for their own profits/rewards for doing so.
+Think of this as "Skin-in-the-Game". Parties participating in the governance system are incentivized to do good because they themselves are accountable for their own profits/rewards.
 
 ### 6. Sustainability
 
@@ -84,6 +78,10 @@ Think of this as "Skin-in-the-Game". Parties participating in the governance sys
 ### 7. Liveness
 
 *"A blockchain governance system satisfies liveness if it is capable of incorporating an input of urgency from the stakeholders and then being capable of acting on it in the sense that if an issue is deemed to be urgent according to some function, then the decision making procedure is capable of terminating within a reasonable amount of time, as a function of the urgency of the matter."*
+
+More broadly stated, liveness implies two things:
+- the governance system continues to operate indefinitely,
+- in case of an emergency, there are procedures in place that can bring it back to life
 
 <!-- 
 Potential Attack Vector or Denial of Service:
@@ -99,34 +97,35 @@ To understand the governance terminology in Cardano better, let us break down so
 
 ### Funding Proposals vs Cardano Improvement Proposals
 
-Cardano's governance system consists of:
+Cardano's governance system is centred on a collective decision making process which is meant to solve which future projects to support. However, there are indeed two different governing bodies:
 - The Cardano community (decentralized)
 - The Cardano Foundation (more centralized)
 
-The first caveat we discovered was that there are two different types of proposals in the Cardano ecosystem:
-
+Each of these governing bodies focus on different types of proposals in the Cardano ecosystem, namely:
 - Cardano Improvement Proposals (CIPs), and
 - Funding Proposals (FP)
 
-The CIPs are entirely managed by the Cardano Foundation, whereas solely FPs are eligible for the community to decide upon. This indicates that there is to some degree an aspect of centralization remaining in Cardano's governance system, at least the protocol layer. It has been mentioned, nevertheless that eventually, CIPs will also be governed by the community, but it is unclear when. Regardless of the truthfulness of the latter statement, it is near impossible to claim that the decision to make CIPs subject to public voting is made in a decentralized manner. This being said, we have to restrict the analysis of the governance process to FPs accordingly.
+The CIPs are entirely managed by the Cardano Foundation, whereas solely FPs are eligible for the community to decide upon. This indicates that there is to some degree an aspect of centralization remaining in Cardano's governance system, at least the implementation of Cardano's blockchain layer. 
 
-### Proposals
+It has been mentioned that CIPs will also be governed by the community, but it is unclear when. Regardless of the truthfulness of the latter statement, it is near impossible to claim that the decision to make CIPs subject to public voting is made in a decentralized manner. Because most of the documentation related to Cardano's governance framework targets FPs, we focus our analysis on the governance process used by the Cardano community.
 
-To contribute to the sustainable evolution of the Cardano ecosystem, community members are eligible to submit proposals. These proposals represents projects to be built on top of the Cardano blockchain.
+### Funding Proposals
 
-Generally, all system participants may have ideas about how the system should evolve, but not all of them may know what is in their best interest. Nevertheless, one would argue, that as a participant in a system, one immediately has "skin-in-the-game" in that system since it directly effects the person's utility.
+To contribute to the sustainable evolution of the Cardano ecosystem, community members are eligible to submit funding proposals. These proposals represents projects to be built on top of the Cardano blockchain, and generally to be funded by the collective treasury (more on this below).
 
-The most obvious incentive for community members to participate in the Cardano ecosystem is to make the Cardano ecosystem better. What this "better" implies, however, is not very clear. The most obvious definition would be "better in such a way that the underlying native token of Cardano, namely ADA, surges in value", thereby increasing the financial position of the community member. There may be purely altruistic motives, or community members with an interest in solving difficult enginereering problems (we do not exclude such participants here).
+Generally, all system participants may have ideas about how the system should evolve, but not all of them may know what is in the ecosystem's best interest. Additionally, not all funding proposals may be in the best interst of the community.
+
+The most obvious incentive for community members to participate in the Cardano ecosystem is to make the Cardano ecosystem better. What this "better" implies, however, is not very clear, as highlighted by the function $\lambda$ above, which could potentially leave room for obfuscating malintent.
  
-As we learned from the collective decision making games in class, even if on the average it is rational to contribute to common good, there are occassions where it is more rational to deviate. Here, rationality implies making a decision that maximizes the decision maker's utilit y rather than that of the collective. This is also important to take into consideration, when considering the extent to which the good of the community has a positive impact on the individual's utility. In a Blockchain scenario, the most common binder between an individual actor, and the community itself, is its underlying token. Hence, any person deciding to join the commuinity may have good intentions, but may nevertheless face a scenario where it is more beneficial to deviate, such as for example disrupting a positive project, when a short position on the tokens value exists. ...But, because stake in the system is relative to the amount of ADA tokens a particular community member holds, it would arguably make the most sense that there are financial incentives at play, and that these financial incentives prevent adversarial behavior. 
+As we learned from the collective decision making games in class, even if on the average it is rational to contribute to the common good when you participate in the community for a long periodof time, it is not necessarily the case that all participants want to participate forever. Also, as in any collective society, selfish interests may lead to conflicting interest between community members, which by nature leads to suboptimal collective outcomes. Therefore, one may argue that any good governance system has to make sure that the collective good provides enough utility for each individual on the average to be incentivized to participate in order to satisfy the sustainability of participation criteria.
 
 ### Is the treasury system implemented?
 
-A core question we tried to answer was the extent to which the treasury system is implemented. According to the [Treasury system paper](https://eprint.iacr.org/2018/435.pdf), Cardano's Voltaire release will contain its implementation. Currently, however, there exists a publicly available governance interface, namely [Project Catalyst](https://projectcatalyst.org/), an online platform where community members can learn about how to come up with their own proposals, vote, and assess proposal accordingly. This looks very similar to the ideas discussed in the academic paper.
+A core question we tried to answer was the extent to which the treasury system is implemented. According to the [Treasury system paper](https://eprint.iacr.org/2018/435.pdf), Cardano's Voltaire release will contain its implementation. Currently, however, there exists a publicly available governance interface, namely [Project Catalyst](https://projectcatalyst.org/). This is an online platform where community members can learn about how to come up with their own proposals, vote, and assess proposals accordingly. This looks very similar to the ideas discussed in the academic paper, but there appeared to be a few discrepencies. As such, we decided to base our analysis on the paper rather than Project Catalyst.
 
-It was important for us to see how easy it was to sign up to, and participate in the Cardano Community. We were surprised that there was not a perfect mapping between the paper and Catalyst. However, we signed up to Project Catalyst as a standard user so we could evaluate the governance system's practicalities in more detail. Signing up was quite straightforward, as we just signed up with an email address.
+Still, it was important for us to see how easy it was to sign up to and participate in the Cardano Community to assess the extent to which suffrage is solved for the Blockchain governance system. Therefore, we signed up to Project Catalyst as a standard user so we could evaluate the governance system's practicalities in more detail.
 
-Unfortunately, we were unable to propose a new project because the deadline had passed, but there was a well-defined interface for doing so, and we quickly found out the different stages/rounds from project ideation to funding a particular "governance round" consists of. It is also worthwhile mentioning that there is a term called "Campaigns" which represents group of proposals with a common theme. Proposals must belong to a particular campaign accordingly.
+Unfortunately, we were unable to propose a new project because the deadline had passed, but there was a well-defined interface for doing so, and we quickly found out the different stages/rounds from project ideation to funding a particular "governance round" (as Catalyst calls it) consists of. 
 
 The rounds defined on Catalyst's platform were:
 
@@ -136,8 +135,6 @@ The rounds defined on Catalyst's platform were:
 - Assessment
 - Assess QA
 - Governance (AKA voting phase)
-
-The academic paper, however, focuses on Governance. For the sake of brevity, we will concentrate primarily on this paper from here onwards, but it is necessary to briefly cover what the different periods represent.
 
 #### Catalyst periods
 
@@ -164,17 +161,25 @@ The academic paper, however, focuses on Governance. For the sake of brevity, we 
 
 Inactive proposals are eventually archived. The definition of inactive is unclear.
 
-### Treasury funding
+#### Voltaire periods
 
-As mentioned, Cardano uses a treasury-model for collective decision making purposes. This means that the community decides via some process, how to use the funds in the treasury primarily. The exact way this happens in Voltaire will become more clear with time.
+In the Voltaire period, the number of rounds is simplified to:
 
-Even if Voltaire will be the first release of the implementation of Cardano's governance paper, it does not necessarily mean there exists no treasury, and collective decision making today. In fact, the treasury is already live, but we are uncertain as to the extent to which it is implemented  according to the security principles outlined in the theoretical/academic paper.
+- Pre-voting phase,
+- Voting phase,
+- Post-voting phase,
 
-According to Catalyst, Cardano's treasury system is on Funding round 9 (usually listed as FUND9). The data surrounding the treasury, and its overall funding history, is relatively transparent, but not necessarily easy to understand in relation to the documentation that exists. The data is generally shared through a shared Google Doc, which is publicly readable, but terminology is defined across various information sources making it not that straightforward to understand what the numbers mean. See for example: ["treasury-exceeded-900-million-ada-held"](https://cardanofeed.com/cardano-treasury-exceeded-900-million-ada-held-here-s-what-they-spend-it-on-84369.html).
+Hence it is clear that there are some differences between the two. It seems additional focus has been placed on review and QA in Catalyst, potentially due to the fact that it is not as secure as Voltaire would be, but this is not easy to say from the sources we have available to us.
+
+### The treasury system
+
+As mentioned, Cardano uses a treasury-model for collective decision making purposes. This means that the community collectively decies how to use the funds in the treasury to fund project proposals.
+
+Currently, even if Voltaire is still WIP, the treasury is live. According to Catalyst, Cardano's treasury system is on Funding round 9 (usually listed as FUND9). The data surrounding the treasury, and its overall funding history, is relatively transparent, but not necessarily easy to understand in relation to the documentation that exists. The data is generally shared through a shared Google Doc, which is publicly readable, but terminology is defined across various information sources making it not that straightforward to understand what the numbers mean. See for example: ["Catalyst announcement"](https://iohk.io/en/blog/posts/2020/09/16/project-catalyst-introducing-our-first-public-fund-for-cardano-community-innovation/).
 
 As mentioned, Cardano uses a treasury system to govern the evolution of the protocol, however Cardano was not the first platform to do so (the Dash governance system invented the treasury model in the blockchain space apparently). In a treasury system, the collective decides upon where funding is allocated. That being said, the funds have to arrive from somewhere, hence there exists a set of funding mechanisms to make the governance system sustainable.
 
-#### Funding mechanisms
+#### Cardano treasury funding mechanisms
 
 In the Cardano governance system, the treasury is funded in three different ways:
 
@@ -186,7 +191,7 @@ It has been shown (see the Treasury link above) that the treasury appears to be 
 
 ### Voltaire in detail
 
-First and foremost Voltaire is designed to utilize a *fuzzy voting system*. Such a voting system generally 
+First and foremost Voltaire is designed to utilize a *fuzzy voting system*.
 
 Voltaire, and the Cardano governance system is focused on defining consensus not necessarily on the terms of "unanimous agreement", but in stead on a set of metrics that indicate the extent to which voters vote according to the priorities of the community. They thereafter use the set of metrics estimated per voting phase to provide feedback to voters, to satisfy both the verifiability definition above. In this way, voters can be re-assured that their vote is their "true" vote.
 
