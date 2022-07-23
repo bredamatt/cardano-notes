@@ -9,3 +9,7 @@
 - [Blockchain Guarantees](revealjs/Description/5.guarantees.md)
 - [Threat Models](revealjs/Description/6.threat-models-and-security.md)
 - [Conclusion](revealjs/Description/6.threat-models-and-security.md)
+
+
+- [Appendix](revealjs/Description/8.appendix.md)
+- [Links](revealjs/Description/9.links.md)
