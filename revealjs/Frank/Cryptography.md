@@ -4,7 +4,7 @@
 ## Primitives
 Cardano uses asymmetric key and certification primitives to secure the interactions between network participant:
 
-![img.png](img.png)
+![img.png](img.png)  
 Source:[^1]
 
 ### Asymmetric Keys

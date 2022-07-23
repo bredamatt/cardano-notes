@@ -47,7 +47,7 @@ Expansion of the circulating supply comes from the *reserve*, where `reserve = m
 first years but decreases over time until most rewards will come from transaction fees. The supply schedule can 
 therefore be described as monotonically decreasing inflation.
 
-![img_2.png](img_2.png)
+![img_2.png](img_2.png)  
 Source: https://forum.cardano.org/t/how-does-cardano-reach-its-supply-cap-via-staking/39697/8
 
 ### Rewards
