@@ -1,11 +1,11 @@
-# Cardano: Cryptography, Economics and Blockchains Midterm
+# Cryptography, Economics and Blockchains Midterm: Cardano
 
-- Introduction
-- [Cryptography](revealjs/Cryptography.md)
-- [Economics 1](revealjs/midterm/slides.md)
-- [Economics 2](revealjs/Economics/economics.md)
-- [Governance](revealjs/Governance/governance.md)
-- [Blockchain Structure](revealjs/Blockchain/structure.md)
-- [Blockchain Guarantees](revealjs/Blockchain/guarantees.md)
-- [Threat Models](revealjs/Blockchain/threat-models-and-security.md)
-- Conclusion
+---
+- [Introduction](revealjs/Description/0.introduction.md)
+- [Cryptography](revealjs/Description/1.Cryptography.md)
+- [Economics](revealjs/Description/2.economics.md)
+- [Governance](revealjs/Description/3.governance.md)
+- [Blockchain Structure](revealjs/Description/4.structure.md)
+- [Blockchain Guarantees](revealjs/Description/5.guarantees.md)
+- [Threat Models](revealjs/Description/6.threat-models-and-security.md)
+- [Conclusion](revealjs/Description/6.threat-models-and-security.md)
