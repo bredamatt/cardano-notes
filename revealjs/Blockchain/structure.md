@@ -39,7 +39,7 @@ Their roadmap suggests that the settlement layer will include the following:
 
 ### Cardano Computation Layer (CCL)
 The CCL is inspired by the Rootstock[^5] smart contract platform on Bitcoin.
-This will enable the development of specialized protocols that can help Cardano scale over the years. Among the discussed technology are Sealed Glass Proofs, which 
+This will enable the development of specialized protocols that can help Cardano scale over the years. Among the discussed technology are Sealed Glass Proofs, which are a form of ZK proofs that utilize hardware security modules such as Intel's SGX.
 The reasoning behind the CCL’s implementation lies in its ability to help scale specialized protocols over the years. This involves adding hardware security modules (HSM) to the existing stack of protocols as technology advances.
 
 ## Consensus algorithm
