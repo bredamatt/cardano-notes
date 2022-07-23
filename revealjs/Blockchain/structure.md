@@ -46,21 +46,23 @@ The reasoning behind the CCL’s implementation lies in its ability to help scal
 The consensus algorithm that is used is Ouroboros Praos[^2].
 
 ### Definitions
-Beacon: Ouroboros uses a VRF ,called a beacon, to generate a random number.
+Beacon: Ouroboros uses a VRF, called beacon, to generate a random number.
 The beacon regularly emits a new random value which is then used for
 stakeholder elections.
 
 Epoch: A point in protocol execution where the set of stakeholders eligible
-to be block producers does not change. Each epoch has it's own beacon.
+to be block producers does not change. Each epoch has it's own beacon and lasts 5 days. 
+Currently we are on epoch 352.
 
 Slot: Every epoch is divided up equally to a number of slots.
-This relation determines the block time such that if epoch is 1 hour
-and the number of slots is 60, that would produce 1 block every minute.
+Slots are block-producing oportunities - in each slot a block can (but doesn't have to)
+be produced. Currently there are 432,000 slots per epoch, which equates to 1 slot a second.
 
 Slot leader: the online stakeholder that is eligible to produce a new block.
 
-Block: every slot should have a produced block which includes the current state,
-other data, the slot number and a signature from the block creator.
+Block: every slot should have a 5% chance of producing a block which includes the current state,
+other data, the slot number and a signature from the block creator. This means a block is produced 
+every 20 seconds.
 
 ### How it works
 
@@ -109,7 +111,7 @@ The **block body** also  extracts the `vk` block issuer and the `blockno` block 
 The operational certificate, `oc`, is used by the **operational certificate** state transition to validate that the staking pool
 that created the block was eligible to do so.
 
-The slot leader is determined by a VRF. The inputs of the VRF are the block's `slot`, the VRF verification key `vrfVk` and the `nonce` which is derived from hash made of 2/3 blocks from the previous epoch.
+The slot leader is determined by a VRF. The inputs of the VRF are the block's `slot`, the VRF verification key `vrfVk` and the `nonce` which is derived from hash made of 2/3 of the blocks from the previous epoch.
 This can be verified with the nonce proof `prf_n` and leader election proof `prf_l`.
 This all happens in the **overlay** transition and it's sub transitions.
 
@@ -126,7 +128,7 @@ Depends on:
 Ensures that:
 
 - The slot is incremented by one
-- The block number is incremented one
+- The block number is incremented by one
 - The prev hash matches the hash of the previous block header
 - The size of the block header is smaller than the maximum block header size of the protocol
 - The size of the block body is smaller than the maximum block body size of the protocol.
@@ -154,7 +156,7 @@ Ensures that:
 
 #### Update nonces transition
 Ensures that:
-- the nonces get updated until the randomness gets fixed
+- The nonces get updated until the randomness gets fixed
 
 ### Tick transition
 Depends on:
@@ -167,9 +169,9 @@ Ensures that:
 
 #### Reward update transition
 Ensures that:
-- the current reward will be recalculated if the current slot algorithm allows it
-- the current reward will not b recalculated if the current slot algorithm disallows it
-- that if the current reward has already been calculated, the state will not update
+- The current reward will be recalculated if the current slot algorithm allows it
+- The current reward will not be recalculated if the current slot algorithm disallows it
+- If the current reward has already been calculated, the state will not update
 
 #### New epoch transition
 Depends on:
@@ -181,11 +183,12 @@ Ensures that:
 
 ##### Move instantaneous rewards (MIR) transition
 Ensures that:
-- if the reserve and treasury pots can cover the sum of pending instantaneous rewards, the accounts affected are paid the correct amount and the reserve and treasury drained. After, both of the instantaneous reward mappings are reset to the empty mapping
+- If the reserve and treasury pots can cover the sum of pending instantaneous rewards, the accounts affected are paid the correct amount and the reserve and treasury are drained. After, both of the instantaneous reward mappings are reset to the empty mapping
 
 ##### Complete epoch boundary transition
 Depends on:
 - The **move instantaneous rewards** transition
+
 Ensures that:
 - The **new protocol parameter** sub-transition finishes
 - The **snapshot** sub-transition finishes
@@ -201,6 +204,7 @@ A snapshot contains stake, delegation and pool parameter data.
 
 Depends on:
 - The **new protocol parameter** transition
+
 Ensures that:
 - The oldest snapshot is replaced by the middle snapshot
 - The middle snapshot is replaced by the newest snapshot
@@ -252,7 +256,7 @@ Ensures that:
 Ensures that:
 - The transactions supplied get converted to outputs
 - The sum total of all the coin for every output is calculated
-- The *protocol parameter update*** sub-transition finishes
+- The **protocol parameter update** sub-transition finishes
 
 ##### Protocol parameter update transition
 Ensures that:
