@@ -37,7 +37,7 @@ Cardano currently has approximately 75% of its tokens in circulating supply:
 | Supply              | Amount                |
 |---------------------|-----------------------|
 | Initial Supply      | 31.8 billion ADA      |
-| Circulating Supply* | 33.93 billion ADA[^5] |
+| Circulating Supply* | 33.93 billion ADA[^3] |
 | Max Supply          | 45 billion ADA        |
 
 '* The top 100 addresses on network hold ~17% circulating supply.
@@ -55,8 +55,8 @@ Stake pools earn block rewards in the form of *expansion* and *fees*, which are 
 and the stakers which delegated to the pool. Stake pool operators take a commission for running staking pools.
 
 0.3% of the reserve is distributed each epoch, as staking rewards and treasury funding: 80% to stake pool 
-operators/delegators and 20% to the treasury. The treasury (aka 'pot') is used for funding projects, improvements 
-and the long term sustainability of Cardano.
+operators/delegators and 20% to the treasury for public goods. The treasury (aka 'pot') is used for funding projects, 
+improvements and the long term sustainability of Cardano.
 
 Rewards will therefore ultimately be comprised solely of transaction fees, once the reserve supply has been 
 depleted.
@@ -100,7 +100,7 @@ Factors considered by the delegator:
  
 Benefits: 
   * 3-5% APY return for staking, depending on the stake pool
-  * No lock-up/unbounding period
+  * No lock-up period
   * No requirement of setting up a node
 
 Delegators are therefore free to move their stake to another pool if existing pool operator does not provide a fair 
@@ -110,19 +110,19 @@ lose staking 'power' relatively quickly (within 2 epochs or 10 days).
 ## Economic Incentives
 Cardano has aligned its economic incentives to encourage decentralization, which it deems as critical to the long-term
 success of the project. Rewards are therefore shared between delegators and stake pool operators, a symbiotic
-relationship maximising rewards so long as they are rational.
+relationship maximising rewards so long as they are intelligent and rational, and there is complete information.
 
 The protocol incentivizes validators to stay honest and online. Penalisation of malicious participants is deemed to
-be unnecessary, provided the desired number of pools exist, and they are in Nash equilibrium[^6]
+be unnecessary, provided the desired number of pools exist, and they are in Nash equilibrium[^4].
 
-Cardano's incentive mechanisms seeks a balanced distribution of stake across stake pools, relying on the (perfect) 
-competition of pools to find a market equilibrium where rewards are optimal for all when stake is delegated evenly 
-across pools.
+Cardano's incentive mechanisms seek a balanced distribution of stake across pools towards perfect competition, allowing 
+delegators and stake pools to find market equilibrium: where rewards are optimal for all when stake is delegated 
+evenly across pools.
 
 ![img_3.png](img_3.png)  
 Source: https://blogs.ed.ac.uk/blockchain/2022/04/19/pool-splitting-behaviour-and-equilibrium-properties-in-cardano-rewards-scheme/
 
-This design also allows economic specialisation: stake pool operators have the time, technical expertise and 
+This design also allows for economic specialization: stake pool operators have the time, technical expertise and 
 capital to run nodes which secure the network. Delegators may have none of these, instead delegating 
 their stake to a stake pool to increase the overall pool stake, thereby increasing the probability of the stake pool 
 being elected to earn block rewards.
@@ -137,7 +137,5 @@ being elected to earn block rewards.
 [^1]: https://cardanians.io/en/the-story-of-ada-lovelace-40
 [^2]: The accounting model is extended to accommodate transactions using custom token types (with their own monetary
 policy), without the need for smart contracts. Multiple token types can be included within the same transaction. https://github.com/input-output-hk/cardano-ledger/blob/master/doc/explanations/features.rst
-[^3]: https://www.figment.io/resources/cardano-ada-tokenomics
-[^4]: https://www.cryptoeq.io/corereports/cardano-abridged
-[^5]: https://messari.io/asset/cardano/chart/sply-circ
-[^6]: https://medium.com/coinmonks/why-cardano-does-not-need-slashing-85630ff55092
+[^3]: https://messari.io/asset/cardano/chart/sply-circ
+[^4]: https://medium.com/coinmonks/why-cardano-does-not-need-slashing-85630ff55092
