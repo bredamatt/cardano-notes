@@ -6,12 +6,14 @@
 
 ### How does this project solve the collective decision making problem?
 
-- This is done via a combination of:
+- By using:
     - Liquid democracy
     - Treasury system
     - Cryptography 
 
-- The cryptography is used to establish a suite of security guarantees (for example to guarantee that the votes are not tampered with) whilst the treasury is used as a decentralized trust. The result of a vote in the liquid democracy system determines how the funds in the treasury are spent.
+- The cryptography establishes guarantees that votes are not tampered with.
+- The treasury is used as a decentralized trust. 
+- The result of a vote in the liquid democracy system determines how the funds in the treasury are spent.
 
 ---
 
@@ -27,7 +29,7 @@
 
 - Committee members are primarily responsible for tallying votes, and guaranteeing liveness of the governance system. 
 
---- 
+---
 
 ### What voting mechanisms are used in this project?
 
@@ -36,7 +38,7 @@
     - Voters can vote directly for proposals, or delegate to experts.
     - Experts receive delegated stake, and can delegate their previously received stake to other experts if necessary
 
---- 
+---
 
 ### Who is allowed to vote in this project? What are the voting criteria?
 
