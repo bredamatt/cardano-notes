@@ -33,6 +33,9 @@ Cardano's core offerings are as follows:
 
 - Formal verification/strong proofs a core feature of Cardano (formal methods to achieve strong guarantees)
 - Delegated Proof-of-Stake as a consensus mechanism
+
+---
+
 - Decentralised funding mechanism
 - Separation of concerns: separation of settlement (value transfer) and computation layers (smart contracts)
 - Regulation
