@@ -25,7 +25,7 @@ Operator controlling large amount of stake pools could control entire network
 
 - Prevented in Cardano via "pledging" 
 - Operators entitled to bonus reward by pledging portion of own funds 
-- Incentivizes operators to have higher pledge, discouraging them from creating multiple stake pools
+- Incentivizes operators to have higher pledge, discouraging from creating multiple stake pools
 
 <widget-text style="...">
 ---
@@ -56,7 +56,7 @@ Operator controlling large amount of stake pools could control entire network
 - Desynchronization attack: shareholder behaves honestly but incapable of synchronizing correctly with network 
 - No guarantees of liveness and persistence provided for desynchronized parties
 - Network secured as long as parties with < 50% of stake get desynchronized 
-- If > 50% parties get desynchronized, protocol can fail
+- If > 50% parties desynchronized, protocol can fail
 
 <widget-text style="...">
 ---
