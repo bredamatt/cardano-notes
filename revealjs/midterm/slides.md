@@ -64,61 +64,106 @@
 
 ---
 
-<widget-text style="padding: 0 3em 0 3em">
+| Seed Sale                                           | Amount                   |
+|-----------------------------------------------------|--------------------------|
+| Public                                              | 25.9 billion ADA (57.6%) |
+| [IOHK](https://iohk.io) (development company)       | 2.46 billion ADA (5.5%)  |
+| [EMURGO](https://emurgo.io) (commercial adoption)   | 2.07 billion ADA (4.6%)  |
+| [Cardano Foundation](https://cardanofoundation.org) | 640 million ADA (1.4%)   |
+| Reserve / Uncirculated                              | 13.9 billion ADA (30.9%) |
 
-**Goal:** Evaluate the use of tokenomics in this project; name at least two things you like and two things you would want to improve.
-
-* Does this project involve a native coin or currency? What are the tokenomics of the coin? How is the coin earned?
-* How does this project use economic incentives to drive behavior?
-* Use at least 3 of the following economic concepts in your answer:
-    * Market Equilibrium (Supply and Demand): What is the supply schedule of the token, does it have inflation or deflation? Who will want to use the coin, and for what?
-    * Economic Specialization
-    * Game Theoretical Models
-    * Auction Mechanics and Price Discovery Methods
-
--------------------------------------------------
-
-Native coin: ADA
-
-Can be used for: 
-Staking
-Fees
-Governance
-
-Tokenomics: 
-- Supply: 45 billion
-- In circulation: 33.5 billion
-- Monetary expansion rate: 0.3 % (half of the remaining reserve would be used every four to five years) of the reserve (supply - in circulation) per epoch (every 5 days). Where 80 % is a reward for the stake pool, 20 % is for the treasury
-- Deflationary supply
-
-Stake pools:
-- Maximum size for stake pools
-- Validators run a stake pool and ask commission from the delegators. Delegators delegate their stake to a staking pool and get rewarded proportionally to their stake. There is a latency period of 15-20 days, but delegators can unstake their stake whenever they want.
-- “Parameter K”: defines how many pools there should be in the network and an estimated cap for their respective stake. Any amount of stake that surpasses this stake won’t earn additional reward.
-- No slashing
-- The Cardano environment is unique in the way it handles fees, as fees do not go directly to the block producer. Instead, they are pooled and then distributed to all pools that created blocks during an epoch.
-
-|Market equilibrium|: see tokenomics and stake pools
-
-|Economic specialization|: governance, keeping the network alive and potentially more with the possibility to write smart contracts on the csl/ccl?
-
-|Game theoretical models|: (just wrote some stuff down which we could use, not entirely sure for me what they want to see here)
-equilibrium
-public good game
-tragedy of commons
-
-
-|Auction mechanics|: side chains, will look into this now (Daan)
-
-
-|price discovery methods|:
-Fees are constructed around two constants (a and b). The formula for calculating minimal fees for a transaction (tx) is: 
-a * size(tx) + b		
-where:
-- a reflects the dependence of the transaction cost on the size of the transaction. The larger the transaction, the more resources are needed to store and process it.
-- b is a payable fee, regardless of the size of the transaction. This parameter was primarily introduced to prevent Distributed-Denial-of-Service (DDoS) attacks. b makes such attacks expensive, and eliminates the possibility of an attacker generating millions of small transactions to flood and crash the system.
-* size(tx) is the transaction size in bytes
 ---
+
+### Inflation
+
+The rate of inflation is 0.3% of the reserve per epoch (every 5 days), where:
+- 80% will be used to reward staking pools
+- 20% goes to the treasury
+
+---
+
+## Token utility
+
+* Staking
+* Fees
+* Governance
+
+---
+
+#### Stake pools 
+- Run by the stake pool operator (SPO)
+- reliable operator: an individual or business with the knowledge and resources to run the 
+node on a consistent basis
+- Saturation parameter "k" - desired number of pools, indicating the max. amount of ADA per pool ideal for the network (64 million)
+- Public and private stake pools, private when filled by the pledge
+
+---
+
+#### Pledging 
+- "Skin in the game" - for each epoch, the stake pool owners have to submit a pledge
+- Not meeting the pledge will result in no rewards
+- The pledge increases the pool reward
+- Attractive to delegators
+
+---
+
+#### Delegating
+- Staking ADA by delegating to a stake pool
+- High pledge and low margin effect the pool attractiveness
+- Tokens are not locked
+
+---
+
+![](./midterm/cardano_payout.png)
+
+---
+
+#### Pool rewards
+Stake pools are rewarded by the sum of:
+- 80% of the monetary expansion.
+- All the transaction fees during the new epoch.
+- Fixed costs - a fixed fee of 340 ADA to every pool (covers the pool's operating costs).
+
+---
+
+![](./Description/img_2.png)
+
+- Rewards increase with stake pool "size" until the pool is saturated
+- the higher the pledge influence factor, the more important the size of the pledge
+
+---
+
+### Fees
+
+The formula for calculating minimal fees for a transaction (tx) is:
+#### a * size(tx) + b		
+
+- A reflects the dependence of the transaction cost on the size of the transaction
+- B is a payable fee
+- size(tx) is the transaction size in bytes
+
+---
+
+### Takeaways
+- Cardano's incentive mechanisms seeks a balanced distribution of stake across pools towards perfect competition, allowing
+- Stake pool operators have the time, technical expertise and capital to run nodes which secure the network. Delegators may have none of these, instead delegating their stake to a stake pool to increase the overall pool stake, thereby increasing the probability of the stake pool
+being elected to earn block rewards.
+
+---
+
+### Pros:
+* Rewards shared between stake pool operators and delegators, no lock up period so delegators can easily re-stake with
+  another operator if a stake pool performs poorly or its operator behaves maliciously (liquid democracy).
+* No slashing, reducing delegator staking risk.
+
+---
+
+### Cons:
+* The pledge can be removed at any time
+* No slashing
+
+---
+
 
 <!-- .slide: data-background-color="#8D3AED" -->
 
@@ -170,55 +215,3 @@ where:
 * What are the core elements of the application stack?
 * What is the anatomy of a block in this system?
 * What is the consensus algorithm that is used? How does it work?
-
----
-
-<!-- .slide: data-background-color="#8D3AED" -->
-
-# 6. Threat Models and Security
-
----
-
-<widget-text style="padding: 0 3em 0 3em">
-
-**Goal:** Evaluate the security protocols of this project; name at least two things you like and two things you would want to improve.
-
-* How does this project protect against threats?
-    * Byzantine Generals Problem
-    * 51% Attack
-    * Sybil Attack
-    * Other Attacks
-
-* How does this project provide secure transactions?
-
----
-
-<!-- .slide: data-background-color="#8D3AED" -->
-
-# 7. Conclusion
-
----
-
-<widget-text style="padding: 0 3em 0 3em">
-
-Summarize your findings by connecting the most important ideas together and answering these questions:
-
-1. How do the cryptographic elements, the economic incentives and the blockchain parameters all contribute to the core goals of this blockchain?
-
-2. Of the things that you identified you liked the _most_, what were the two top things you would highlight?
-
-3. Of the things that you identified you liked the _least_, what were the two top things you would highlight?
-
-4. Describe a way you would devise an attack on this system.
-
----
-
-## Extra Credit/Stretch Goal
-
-<widget-text style="padding: 0 3em 0 3em">
-
-* Implement the attack described in the conclusion
-
-* Propose an improvement to one or two aspects of your critique and implement it
-
----
