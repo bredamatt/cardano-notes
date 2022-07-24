@@ -1,3 +1,4 @@
+<!-- .slide: data-background-color="#8D3AED" -->
 # Blockchain Structure
 
 ---
@@ -9,7 +10,7 @@
 
 ---
 
-## Core elements 
+## Core elements
 
 * Settlement layer *CSL*
 * Computation layer *CCL*
@@ -95,4 +96,3 @@
 * Praos provides private leader elections
   - VRF based randomness
   - prevents adversaries from learning who the leader is
-
