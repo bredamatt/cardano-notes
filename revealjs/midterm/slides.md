@@ -197,20 +197,68 @@ The Hydra protocol(under active development), which create state channels for eU
     * Game Theoretical Models
     * Auction Mechanics and Price Discovery Methods
 
--------------------------------------------------
+---
 
-Native coin: ADA
+| Seed Sale                                           | Amount                   |
+|-----------------------------------------------------|--------------------------|
+| Public                                              | 25.9 billion ADA (57.6%) |
+| [IOHK](https://iohk.io) (development company)       | 2.46 billion ADA (5.5%)  |
+| [EMURGO](https://emurgo.io) (commercial adoption)   | 2.07 billion ADA (4.6%)  |
+| [Cardano Foundation](https://cardanofoundation.org) | 640 million ADA (1.4%)   |
+| Reserve / Uncirculated                              | 13.9 billion ADA (30.9%) |
 
-Can be used for: 
-Staking
-Fees
-Governance
+---
 
-Tokenomics: 
-- Supply: 45 billion
-- In circulation: 33.5 billion
-- Monetary expansion rate: 0.3 % (half of the remaining reserve would be used every four to five years) of the reserve (supply - in circulation) per epoch (every 5 days). Where 80 % is a reward for the stake pool, 20 % is for the treasury
-- Deflationary supply
+### Inflation
+
+The rate of inflation is 0.3% of the reserve per epoch (every 5 days), where:
+- 80% will be used to reward staking pools
+- 20% goes to the treasury
+
+---
+
+## Token utility
+
+* #### Staking
+* Fees
+* Governance
+
+---
+
+### Staking
+
+--- 
+
+- Stake pools - run by the stake pool operator (SPO)
+* public and private stake pools
+* 
+
+- Pledging "skin in the game" - For each epoch, the SPO has to submit a pledge
+		   - The higher the pledge, the higher the pool the reward
+
+
+
+---
+
+## Token utility
+
+* Staking
+* #### Fees
+* Governance
+
+---
+
+### Fees
+---
+
+## Token utility
+
+* Staking
+* Fees
+* #### Governance
+
+---
+
 
 Stake pools:
 - Maximum size for stake pools
