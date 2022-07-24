@@ -188,20 +188,6 @@ The Hydra protocol(under active development), which create state channels for eU
 
 ---
 
-<widget-text style="padding: 0 3em 0 3em">
-
-**Goal:** Evaluate the use of tokenomics in this project; name at least two things you like and two things you would want to improve.
-
-* Does this project involve a native coin or currency? What are the tokenomics of the coin? How is the coin earned?
-* How does this project use economic incentives to drive behavior?
-* Use at least 3 of the following economic concepts in your answer:
-    * Market Equilibrium (Supply and Demand): What is the supply schedule of the token, does it have inflation or deflation? Who will want to use the coin, and for what?
-    * Economic Specialization
-    * Game Theoretical Models
-    * Auction Mechanics and Price Discovery Methods
-
----
-
 | Seed Sale                                           | Amount                   |
 |-----------------------------------------------------|--------------------------|
 | Public                                              | 25.9 billion ADA (57.6%) |
@@ -222,75 +208,86 @@ The rate of inflation is 0.3% of the reserve per epoch (every 5 days), where:
 
 ## Token utility
 
-* #### Staking
+* Staking
 * Fees
 * Governance
 
 ---
 
-### Staking
-
---- 
-
-- Stake pools - run by the stake pool operator (SPO)
-* public and private stake pools
-* 
-
-- Pledging "skin in the game" - For each epoch, the SPO has to submit a pledge
-		   - The higher the pledge, the higher the pool the reward
-
-
+#### Stake pools 
+- Run by the stake pool operator (SPO)
+- reliable operator: an individual or business with the knowledge and resources to run the 
+node on a consistent basis
+- Saturation parameter "k" - desired number of pools, indicating the max. amount of ADA per pool ideal for the network (64 million)
+- Public and private stake pools, private when filled by the pledge
 
 ---
 
-## Token utility
+#### Pledging 
+- "Skin in the game" - for each epoch, the stake pool owners have to submit a pledge
+- Not meeting the pledge will result in no rewards
+- The pledge increases the pool reward
+- Attractive to delegators
 
-* Staking
-* #### Fees
-* Governance
+---
+
+#### Delegating
+- Staking ADA by delegating to a stake pool
+- High pledge and low margin effect the pool attractiveness
+- Tokens are not locked
+
+---
+
+![](./midterm/cardano_payout.png)
+
+---
+
+#### Pool rewards
+Stake pools are rewarded by the sum of:
+- 80% of the monetary expansion.
+- All the transaction fees during the new epoch.
+- Fixed costs - a fixed fee of 340 ADA to every pool (covers the pool's operating costs).
+
+---
+
+![](./Description/img_2.png)
+
+- Rewards increase with stake pool "size" until the pool is saturated
+- the higher the pledge influence factor, the more important the size of the pledge
 
 ---
 
 ### Fees
+
+The formula for calculating minimal fees for a transaction (tx) is:
+#### a * size(tx) + b		
+
+- A reflects the dependence of the transaction cost on the size of the transaction
+- B is a payable fee
+- size(tx) is the transaction size in bytes
+
 ---
 
-## Token utility
-
-* Staking
-* Fees
-* #### Governance
+### Takeaways
+- Cardano's incentive mechanisms seeks a balanced distribution of stake across pools towards perfect competition, allowing
+- Stake pool operators have the time, technical expertise and capital to run nodes which secure the network. Delegators may have none of these, instead delegating their stake to a stake pool to increase the overall pool stake, thereby increasing the probability of the stake pool
+being elected to earn block rewards.
 
 ---
 
+### Pros:
+* Rewards shared between stake pool operators and delegators, no lock up period so delegators can easily re-stake with
+  another operator if a stake pool performs poorly or its operator behaves maliciously (liquid democracy).
+* No slashing, reducing delegator staking risk.
 
-Stake pools:
-- Maximum size for stake pools
-- Validators run a stake pool and ask commission from the delegators. Delegators delegate their stake to a staking pool and get rewarded proportionally to their stake. There is a latency period of 15-20 days, but delegators can unstake their stake whenever they want.
-- “Parameter K”: defines how many pools there should be in the network and an estimated cap for their respective stake. Any amount of stake that surpasses this stake won’t earn additional reward.
-- No slashing
-- The Cardano environment is unique in the way it handles fees, as fees do not go directly to the block producer. Instead, they are pooled and then distributed to all pools that created blocks during an epoch.
-
-|Market equilibrium|: see tokenomics and stake pools
-
-|Economic specialization|: governance, keeping the network alive and potentially more with the possibility to write smart contracts on the csl/ccl?
-
-|Game theoretical models|: (just wrote some stuff down which we could use, not entirely sure for me what they want to see here)
-equilibrium
-public good game
-tragedy of commons
-
-
-|Auction mechanics|: side chains, will look into this now (Daan)
-
-
-|price discovery methods|:
-Fees are constructed around two constants (a and b). The formula for calculating minimal fees for a transaction (tx) is: 
-a * size(tx) + b		
-where:
-- a reflects the dependence of the transaction cost on the size of the transaction. The larger the transaction, the more resources are needed to store and process it.
-- b is a payable fee, regardless of the size of the transaction. This parameter was primarily introduced to prevent Distributed-Denial-of-Service (DDoS) attacks. b makes such attacks expensive, and eliminates the possibility of an attacker generating millions of small transactions to flood and crash the system.
-* size(tx) is the transaction size in bytes
 ---
+
+### Cons:
+* The pledge can be removed at any time
+* No slashing
+
+---
+
 
 <!-- .slide: data-background-color="#8D3AED" -->
 
