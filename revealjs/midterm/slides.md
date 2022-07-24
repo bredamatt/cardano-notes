@@ -342,23 +342,3 @@ where:
 * What are the core elements of the application stack?
 * What is the anatomy of a block in this system?
 * What is the consensus algorithm that is used? How does it work?
-
----
-
-<!-- .slide: data-background-color="#8D3AED" -->
-
-# 6. Threat Models and Security
-
----
-
-<widget-text style="padding: 0 3em 0 3em">
-
-**Goal:** Evaluate the security protocols of this project; name at least two things you like and two things you would want to improve.
-
-* How does this project protect against threats?
-    * Byzantine Generals Problem
-    * 51% Attack
-    * Sybil Attack
-    * Other Attacks
-
-* How does this project provide secure transactions?
