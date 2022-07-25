@@ -31,7 +31,7 @@
 * Inspired by Rootstock, a smart contract platform on Bitcoin
 * Will enable specialized protocols that can help Cardano scale
 * Will probably use sealed glass proofs in Hardware Security Modules (HSM)
-* Maybe live when hydra launches?
+* Maybe live when Hydra launches?
 
 ---
 
@@ -87,7 +87,7 @@
 * Divides time into Epochs and epochs into slots
   - Epoch = 5 days
   - Slot = 1 second
-  - 432000 slots pr epoch
+  - 432,000 slots per epoch
 
 ---
 

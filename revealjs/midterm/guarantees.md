@@ -7,7 +7,7 @@
 
 ### Liveness
 
-- If all honest nodes in the system attempt to include a transaction, then after $u$ slots (the transaction confirmation time) all nodes will report the transaction as stable.
+- If all honest nodes in the system attempt to include a transaction, then after _u_ slots (the transaction confirmation time) all nodes will report the transaction as stable.
 - Since block production is probabilistic, delays can happen and large number of nodes as well as good synchronisation is required
 
 * No guarantees for liveness of governance
@@ -18,7 +18,7 @@
 
 - Achieved by randomising the choosing of stake-holders (coin-flipping protocol)
 
-- Parties can freely create accountsand make transactions 
+- Parties can freely create accounts and make transactions 
 
 - Stake shifts over time
 
