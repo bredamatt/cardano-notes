@@ -31,16 +31,16 @@ Operator controlling large amount of stake pools could control entire network
 ---
 
 ### Double spending attack
- - Once transaction confirmed by honest player, all other honest players (from that point on) will never disagree on 
+ - Once transaction confirmed by an honest player, all other honest players (from that point on) will never disagree on the
    transaction
- - Thus impossible to bring system to state where confirmed transaction invalidated
+ - Thus impossible to bring the system to state where a confirmed transaction is invalidated
 
 <widget-text style="...">
 ---
 
 ### Grinding attacks
 - Stake grinding attacks: adversary tries to influence slot leader election process to improve chances of selection
-- Cardano uses 'coin tossing' protocol, proven to generate unbiased uniform randomness to elect new block producer
+- Cardano uses 'coin tossing' protocol, proven to generate unbiased uniform randomness to elect new block producers
 
 <widget-text style="...">
 ---
@@ -56,14 +56,14 @@ Operator controlling large amount of stake pools could control entire network
 - Desynchronization attack: shareholder behaves honestly but incapable of synchronizing correctly with network 
 - No guarantees of liveness and persistence provided for desynchronized parties
 - Network secured as long as parties with < 50% of stake get desynchronized 
-- If > 50% parties desynchronized, protocol can fail
+- If > 50% parties desynchronized, the protocol can fail
 
 <widget-text style="...">
 ---
 
 ### Bribery attacks
 - Bribery attacks: adversary deliberately pays block producers to work on specific blocks/forks, aiming at 
-generating fork benefiting adversary 
+generating a fork benefiting adversary 
 - Malicious slot leaders who agree risk foregoing potential profit earned from behaving honestly 
 - Loss from currency devaluation can easily offset additional profits made by participating in attack
 
