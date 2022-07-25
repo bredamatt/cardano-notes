@@ -82,7 +82,7 @@ The collective decision making problem appears in two different places for the C
 - Distributed Key Genereation with threshold
 - Non-interactive zero knowledge proofs (NIZK)
 
-The last two are used to verify that community members are acting honestly during the tallying phase.
+The last two are combined to verify that community members are acting honestly. Led to what IOHK claims to be the *first* honest verifier implementation.
 
 ---
 ### Who is allowed to vote in this project? What are the voting criteria?
