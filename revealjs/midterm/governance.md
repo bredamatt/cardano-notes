@@ -80,7 +80,7 @@ The collective decision making problem appears in two different places for the C
 - Security properties of cryptographic hash functions
     - The committee election phase is based on them
 - Distributed Key Genereation with threshold
-- Non-interactive zero knowledge proofs
+- Non-interactive zero knowledge proofs (NIZK)
 
 The last two are used to verify that community members are acting honestly during the tallying phase.
 
@@ -102,5 +102,7 @@ The last two are used to verify that community members are acting honestly durin
 
 ### What we didn't like 
 
-- Uncertain how far away Voltaire is
-- The incentives for being a committee member
+- Implementation vs. theory
+- Seemed to be a few issues regarding committee members:
+    - NIZK protocol can be used to maliciously complain about honest committee members
+    - Decryption of shared key for a new governance round to commence 
