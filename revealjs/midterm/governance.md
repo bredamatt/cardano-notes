@@ -100,6 +100,7 @@ The last two are used to verify that community members are acting honestly durin
 - Interesting and innovative cryptographic research and protocols
 - The introduction of liquid democracy into an e-voting system
 
+---
 ### What we didn't like 
 
 - Implementation vs. theory
