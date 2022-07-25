@@ -91,7 +91,7 @@ generating fork benefiting adversary
 <!-- .slide: data-background-color="#8D3AED" -->
 
 ## Secure Transactions
-- Deterministic Finality: all transactions guaranteed to exist on ledger after at least 36 hours passed
+- Probabilistic Finality: a transaction is guaranteed to exist on ledger after at least 36 hours 
 - eUTXO: prevents double spending, secured by chain of signatures
 
 <widget-text style="...">
