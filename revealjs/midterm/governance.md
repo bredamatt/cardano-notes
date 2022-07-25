@@ -104,5 +104,5 @@ The last two are used to verify that community members are acting honestly durin
 
 - Implementation vs. theory
 - Seemed to be a few issues regarding committee members:
-    - NIZK protocol can be used to maliciously complain about honest committee members
+    - Appears possible to maliciously complain about honest committee members
     - Decryption of shared key for a new governance round to commence 
