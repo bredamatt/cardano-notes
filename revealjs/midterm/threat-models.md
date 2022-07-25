@@ -105,6 +105,5 @@ generating a fork benefiting adversary
 ---
 
 ## Two things we disliked
-- The ADA Total supply very high compared to Bitcoin, which could lead to less fees being paid out to Stake Pool 
-  Operators, which in turn, could disincentivize them from participating in the network
-- Most security proofs argued for on theoretical basis, unclear to which extent actual implementation satisfies theory
+- Complexity 
+- Most security proofs are argued for on some theoretical basis, unclear to which extent actual implementation satisfies theory. The formal verification process is not public/lacks documentation for an end user.
