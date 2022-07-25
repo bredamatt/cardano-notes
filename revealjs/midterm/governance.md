@@ -46,16 +46,16 @@ The collective decision making problem appears in two different places for the C
 ---
 
 - Why liquid democracy?
-    - Improve Pareto efficiency (likelihood of collectively optimal outcome)
+    - Improve Pareto efficiency (optimal outcome)
         - Uninformed voters can still contribute positively by delegating to someone more knowledgable
     - Encourage developing expertise
         - Higher rewards as experts, but still bound by upper limit
 
 ---
 - Fuzzy threshold voting
-    - Ranks proposals based on:
+    - Ranks each proposal based on:
 
-        ***Remainder = (Votes for each proposal - Votes against each proposal) % Total number of votes***
+        ***Remainder = (Votes for  - Votes against ) % Total number of votes***
         
     - Remainder must be > 10% of all votes recorded for a proposal to be shortlisted for funding
 
