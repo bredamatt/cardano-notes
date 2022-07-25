@@ -91,14 +91,6 @@
 
 ---
 
-## Consensus algorithm
-
-* Praos provides private leader elections
-  - VRF based randomness
-  - prevents adversaries from learning who the leader is
-
----
-
 ### How it works
 
 For every slot in the epoch:
@@ -117,3 +109,11 @@ For every slot in the epoch:
 7. participants compute best chain via `maxvalid` function, set as new local chain and update state
 8. if any blocks belong to a future slot, i.e. a slot that fulfills `current_slot < blocks[i].slot`, they get pruned
 9. if online stakeholder is slot leader, they will create a new block
+
+---
+
+## Consensus algorithm
+
+* Praos provides private leader elections
+  - VRF based randomness
+  - prevents adversaries from learning who the leader is
