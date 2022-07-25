@@ -48,7 +48,7 @@ Voting and Post-Voting stage in governance: the world's first honest ZK verifier
 
 ---
 
-### Pederson Commitments
+### Pedersen Commitments
 
 Voting stage in governance: used to anonymize votes for a proposal.
 
@@ -65,7 +65,7 @@ Sealed Glass Proofs are proposed in the Cardano Computation Layer, which are a f
 - Used by Ouroboros Praos, the consensus mechanism for private slot leader selection. Leader selection was public in 
   previous versions of the protocol, so anyone could determine which node had the right to produce a block.
 
-- Used in combination with NIZK's, Pederson Committments and Additive Homomorphic encryption to provide a random seed for the next voting round in governance.
+- Used in combination with NIZK's, Pedersen Committments and Additive Homomorphic encryption to provide a random seed for the next voting round in governance.
 
 ---
 
