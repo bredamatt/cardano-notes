@@ -3,13 +3,6 @@
 
 ---
 
-## State transition function
-<widget-text style="padding: 0 3em 0 3em">
-
-<img src="../Description/stf.png" width="40%"/>
-
----
-
 ## Core elements
 
 * Settlement layer *CSL*
@@ -32,6 +25,13 @@
 * Will enable specialized protocols that can help Cardano scale
 * Will probably use sealed glass proofs in Hardware Security Modules (HSM)
 * Maybe live when Hydra launches?
+
+---
+
+## State transition function
+<widget-text style="padding: 0 3em 0 3em">
+
+<img src="../Description/stf.png" width="40%"/>
 
 ---
 
@@ -96,3 +96,24 @@
 * Praos provides private leader elections
   - VRF based randomness
   - prevents adversaries from learning who the leader is
+
+---
+
+### How it works
+
+For every slot in the epoch:
+
+1. stakeholders decided via VRF
+2. 0 or more slot leaders selected for a slot
+3. only slot leader will know they are a leader
+4. other slot leaders will not know if they have peers
+5. participants will redetermine stakeholder distribution if new epoch started
+
+---
+
+### How it works (continued)
+
+6. participants collect and verify all gossiped chains
+7. participants compute best chain via `maxvalid` function, set as new local chain and update state
+8. if any blocks belong to a future slot, i.e. a slot that fulfills `current_slot < blocks[i].slot`, they get pruned
+9. if online stakeholder is slot leader, they will create a new block
