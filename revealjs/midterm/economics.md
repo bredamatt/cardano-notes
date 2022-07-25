@@ -86,8 +86,9 @@ The formula for calculating minimal fees for a transaction (tx) is:
 ---
 
 ### Takeaways
-- Cardano's incentive mechanisms seeks a balanced distribution of stake across pools towards perfect competition, allowing
-- Stake pool operators have the time, technical expertise and capital to run nodes which secure the network. Delegators may have none of these, instead delegating their stake to a stake pool to increase the overall pool stake, thereby increasing the probability of the stake pool
+- Cardano has aligned its economic incentives to encourage decentralization. Rewards are shared between delegators and stake pool operators, a symbiotic relationship maximising rewards so long as they are intelligent and rational, and there is complete information.
+- In addition, it incentivises a balanced distribution of stake across pools towards perfect competition, allowing delegators and stake pools to find market equilibrium.
+- The design also allows for economic specialization: stake pool operators have the time, technical expertise and capital to run nodes which secure the network. Delegators may have none of these, instead delegating their stake to a stake pool to increase the overall pool stake, thereby increasing the probability of the stake pool
 being elected to earn block rewards.
 
 ---
