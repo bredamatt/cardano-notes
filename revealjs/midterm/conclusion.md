@@ -1,6 +1,6 @@
 <!-- .slide: data-background-color="#8D3AED" -->
 
-# 7. Conclusion
+# Conclusion
 
 ---
 

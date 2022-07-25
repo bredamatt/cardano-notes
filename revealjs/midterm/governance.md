@@ -1,6 +1,6 @@
 <!-- .slide: data-background-color="#8D3AED" -->
 
-# 3. Governance
+# Governance
 
 ---
 
@@ -10,6 +10,9 @@
     - Liquid democracy
     - Treasury system
     - Cryptography 
+
+
+---
 
 - The cryptography establishes guarantees that votes are not tampered with.
 - The treasury is used as a decentralized trust. 
@@ -24,6 +27,8 @@
     - Voters
     - Experts
     - Committee members
+
+---
 
 - The amount of stake deposited by a participant determines the amount of voting power each participant has (voters and experts only)
 

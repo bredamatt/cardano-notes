@@ -97,14 +97,14 @@ generating fork benefiting adversary
 <widget-text style="...">
 ---
 
-## Likes
+## Two Things we liked
 - Upgradability of cryptographic primitives
 - Stake pools securing PoS consensus protocol
 
 <widget-text style="...">
 ---
 
-## Dislikes
-- ADA Total supply very high compared to Bitcoin, which could lead to less fees being paid out to Stake Pool 
+## Two things we disliked
+- The ADA Total supply very high compared to Bitcoin, which could lead to less fees being paid out to Stake Pool 
   Operators, which in turn, could disincentivize them from participating in the network
 - Most security proofs argued for on theoretical basis, unclear to which extent actual implementation satisfies theory

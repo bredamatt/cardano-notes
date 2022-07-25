@@ -1,21 +1,7 @@
-<!-- .slide: data-background-color="#8D3AED" -->
-
-# 1. Cryptography
-
----
-
-**Goal:** Evaluate the use of cryptography in this project; name at least two things you liked and two things you would want to improve.
-
-* What are the main cryptographic primitives used in this blockchain project?
-* Does this project use any exotic primitives?  If so, which ones?
-* How does this project use digital signatures for security?
-* How does this project use hashing and hash-based data structures to ensure security?
-
----
 
 <!-- .slide: data-background-color="#8D3AED" -->
 
-# 2. Economics
+# Economics
 
 ---
 
@@ -106,67 +92,13 @@ being elected to earn block rewards.
 
 ---
 
-### Pros:
+### Two things we liked
 * Rewards shared between stake pool operators and delegators, no lock up period so delegators can easily re-stake with
   another operator if a stake pool performs poorly or its operator behaves maliciously (liquid democracy).
 * No slashing, reducing delegator staking risk.
 
 ---
 
-### Cons:
+### Two things we disliked
 * The pledge can be removed at any time
 * No slashing
-
----
-
-
-<!-- .slide: data-background-color="#8D3AED" -->
-
-# 3. Governance
-
----
-
-<widget-text style="padding: 0 3em 0 3em">
-
-**Goal:** Evaluate the use of governance in this project; name at least two things you like and two things you would want to improve.
-
-* How does this project solve the collective decision making problem?
-* What are the structures of governance in this project? How are changes proposed and voted on?
-* What voting mechanisms are used in this project?
-* Who is allowed to vote in this project? What are the voting criteria?
-
-
-
----
-
-<!-- .slide: data-background-color="#8D3AED" -->
-
-# 4. Blockchain Guarantees
-
----
-
-<widget-text style="padding: 0 3em 0 3em">
-
-**How does this blockchain/project guarantee the following?**
-
-* **Liveness:** That the blockchain is always adding more transactions and that service will not be interrupted.
-* **Fairness:** No systemic discrimination that is against the rules of the protocol
-* **Censorship-resistance:** No individual actor or coalition can prevent the access of another to the system.
-* **Safety:** No conflicting information.
-
----
-
-<!-- .slide: data-background-color="#8D3AED" -->
-
-# 5. Blockchain Structure
-
----
-
-<widget-text style="padding: 0 3em 0 3em">
-
-**Goal:** Evaluate the blockchain structure of this project; name at least two things you like and two things you would want to improve.
-
-* What is the state transition function of this blockchain/project?
-* What are the core elements of the application stack?
-* What is the anatomy of a block in this system?
-* What is the consensus algorithm that is used? How does it work?

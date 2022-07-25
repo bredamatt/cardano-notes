@@ -1,4 +1,9 @@
--------------------------------------------------------
+<!-- .slide: data-background-color="#8D3AED" -->
+
+
+# Blockchain Guarantees
+
+---
 
 ### Liveness
 
@@ -35,4 +40,3 @@
 
 - Stake pools ensure safety
 
----
