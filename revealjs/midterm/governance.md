@@ -72,9 +72,8 @@ The collective decision making problem appears in two different places for the C
 
 ---
 - Fuzzy threshold voting
-    - Ranks each proposal based on net positive votes.
-        
-    - Net positive must be > 10% of all votes recorded for a proposal to be shortlisted for funding
+    - Ranks each proposal based on net positive votes received.
+    - Net positive % number of total votes, must be > 10% of all votes recorded for a proposal to be shortlisted for funding
 
 ---
 
