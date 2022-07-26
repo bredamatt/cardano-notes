@@ -56,6 +56,11 @@ The collective decision making problem appears in two different places for the C
     - Through donations (external, ie. not part of the protocol)
 
 ---
+
+- No mention of how the funds in the treasury from a market-risk perspective
+- Volatility of the underlying asset (ADA) could be detrimental to fund-raising for various proposals
+
+---
 ### What voting mechanisms are used in this project?
 
 - Liquid democracy
