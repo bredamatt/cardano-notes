@@ -99,11 +99,8 @@ The last two are combined to verify that community members are acting honestly.
     - By taxing block authors' rewards (decentralized)
     - By transferring a fixed portion of the block rewards to the treasury accounts (decentralized)
     - Through donations (external, ie. not part of the protocol)
+    - No mention of how the funds in the treasury are managed from a market-risk perspective
 
----
-
-- No mention of how the funds in the treasury from a market-risk perspective
-- Volatility of the underlying asset (ADA) could be detrimental to fund-raising for various proposals
 
 ---
 
