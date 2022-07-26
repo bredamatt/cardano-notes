@@ -72,11 +72,9 @@ The collective decision making problem appears in two different places for the C
 
 ---
 - Fuzzy threshold voting
-    - Ranks each proposal based on:
-
-        ***Remainder = (Votes for  - Votes against ) % Total number of votes***
+    - Ranks each proposal based on net positive votes.
         
-    - Remainder must be > 10% of all votes recorded for a proposal to be shortlisted for funding
+    - Net positive must be > 10% of all votes recorded for a proposal to be shortlisted for funding
 
 ---
 
