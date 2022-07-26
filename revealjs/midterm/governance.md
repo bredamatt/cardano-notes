@@ -24,6 +24,8 @@ The collective decision making problem appears in two different places for the C
 
 - Rewards are introduced to sustain participation, and they are proportional to stake 
 
+--- 
+
 ### How are changes proposed and voted on?
 
 - Three stages (Pre-voting, Voting, Post-voting)
