@@ -107,7 +107,7 @@ The last two are combined to verify that community members are acting honestly.
 ### What we liked about the Cardano governance system
 
 - Interesting and innovative cryptographic research and protocols
-- The introduction of liquid democracy into an e-voting system
+- The introduction of provably secure liquid democracy into an e-voting system
 
 ---
 ### What we didn't like 
