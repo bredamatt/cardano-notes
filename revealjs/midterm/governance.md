@@ -51,18 +51,6 @@ The collective decision making problem appears in two different places for the C
 - Any Cardano community member who can deposit/stake a minimum of 500 ADA (Cardano's native token) per round is eligible
 
 ---
-### Treasury funding mechanism
-- The treasury is used as a decentralized trust, and is funded in three different ways:
-    - By taxing block authors' rewards (decentralized)
-    - By transferring a fixed portion of the block rewards to the treasury accounts (decentralized)
-    - Through donations (external, ie. not part of the protocol)
-
----
-
-- No mention of how the funds in the treasury from a market-risk perspective
-- Volatility of the underlying asset (ADA) could be detrimental to fund-raising for various proposals
-
----
 ### What voting mechanisms are used in this project?
 
 - Liquid democracy
@@ -107,6 +95,20 @@ The collective decision making problem appears in two different places for the C
 - Non-interactive zero knowledge proofs (NIZK)
 
 The last two are combined to verify that community members are acting honestly. 
+
+---
+
+---
+### Treasury funding mechanism
+- The treasury is used as a decentralized trust, and is funded in three different ways:
+    - By taxing block authors' rewards (decentralized)
+    - By transferring a fixed portion of the block rewards to the treasury accounts (decentralized)
+    - Through donations (external, ie. not part of the protocol)
+
+---
+
+- No mention of how the funds in the treasury from a market-risk perspective
+- Volatility of the underlying asset (ADA) could be detrimental to fund-raising for various proposals
 
 ---
 
