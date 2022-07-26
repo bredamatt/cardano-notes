@@ -24,7 +24,7 @@ The collective decision making problem appears in two different places for the C
 
 - Rewards are proportional to stake 
 
---- 
+---
 
 ### How are changes proposed and voted on?
 
