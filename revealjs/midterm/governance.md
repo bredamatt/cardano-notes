@@ -48,7 +48,7 @@ The collective decision making problem appears in two different places for the C
 
 - Voters and experts are allowed to vote
 - Voting power is propotional to stake
-- Any Cardano community member who can deposit/stake a minimum of 500 ADA (Cardano's native token) per round is eligible
+- Any Cardano community member who can deposit/stake a minimum amount (varied data on how much) of ADA (Cardano's native token) per round is eligible 
 
 ---
 ### What voting mechanisms are used in this project?
