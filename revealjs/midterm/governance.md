@@ -22,7 +22,7 @@ The collective decision making problem appears in two different places for the C
     - Cryptography 
     - Sidechain (Voltaire)
 
-- Rewards are introduced to sustain participation, and they are proportional to stake 
+- Rewards are proportional to stake 
 
 --- 
 
